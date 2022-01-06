@@ -1,0 +1,98 @@
+<!--pages/eqConfig/eqConfig.wxml-->
+<view class="container">
+  <view class="page-body">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section" bindtap="dateSet">
+        <view class="section__title">
+          日期和时间 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="date" style="text-align:right;" hidden="true"  value="{{form.date}}" />
+          <text>{{form.date}}</text>
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view>
+      <!-- <view class="section" bindtap="deviceDirection">
+        <view class="section__title">
+          设备方向 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <text>{{form.devicedDirection}}</text>
+          <input name="devicedDirection" hidden="true" style="text-align:right;" 
+             value="{{form.devicedDirection}}" />
+             <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view> -->
+      <view class="section" bindtap="authentication">
+        <view class="section__title">
+          认证方式 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <text>{{form.authentication}}</text>
+          <input name="authentication" hidden="true" value="{{form.authentication}}" />
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view>
+      <!-- <view class="section" bindtap="openDoorTime">
+        <view class="section__title">
+          开门确认 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <text>{{form.openDoor}}</text>
+          <input name="openDoor" hidden="true"  value="{{form.openDoor}}" />
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view> -->
+      <view class="section" bindtap="volumeSet">
+        <view class="section__title">
+          补光灯模式 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <text>{{form.fillInLight}}</text>
+          <input name="fillInLight" hidden="true" value="{{form.fillInLight}}" />
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view>
+      <view class="section" bindtap="fillInLight">
+        <view class="section__title">
+          音量设置 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <text>{{form.volume}}</text>
+          <input name="volume" hidden="true" value="{{form.volume}}" />
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view>
+      <!-- <view class="section" bindtap="recognitionTips">
+        <view class="section__title">
+          识别提示 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view> -->
+      <!-- <view class="section" bindtap="screenSaver">
+        <view class="section__title">
+          屏幕保护 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="screen" hidden="true" value="{{form.screen}}" />
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view> -->
+      <view class="section" bindtap="faceParameter">
+        <view class="section__title">
+          人脸参数 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="faceParameter" hidden="true" value="{{form.faceParameter}}" />
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view>
+      <view class="section" bindtap="hardwareInterface">
+        <view class="section__title">
+          硬件接口 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="hardwareApi" hidden="true" value="{{form.hardwareApi}}" />
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view>
+      <!-- <view style="width:100%;height:60rpx;border-top:1rpx solid #eee;background:#f0f0f0;"></view>
+      <view class="btn-area">
+        <button class='nodisabled' bindtap="submit">解除绑定</button>
+      </view>
+      <view style="width:100%;height:60rpx;border-top:1rpx solid #eee;background:#f0f0f0;"></view> -->
+    </form>
+  </view>
+</view>

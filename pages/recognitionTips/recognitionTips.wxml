@@ -1,0 +1,41 @@
+<!--pages/recognitionTips/recognitionTips.wxml-->
+<view class="container">
+  <view class="page-body">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section">
+        <view class="section__title">
+          识别成功文字及语音提示 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <!-- <input name="name" style="text-align:right;" placeholder-style="color:#999" bindinput='trimName' maxlength="24" value="{{form.name}}" placeholder="请输入姓名" /> -->
+          <picker bindchange="bindPickerSuccessChange" value="{{successIndex}}" range="{{successTips}}" >
+            <input name="SuccessTips" hidden='true' value="{{successIndex}}" />
+            <text>{{successTips[successIndex]}}</text>
+            <image class="right_img" src='../../image/arrow.png'></image>
+          </picker>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          识别成功姓名展示 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="displayName" hidden="true" value="{{isShowName}}" />
+          <switch checked="{{displayName}}" bindchange="switchChangeDisplayName"/>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          识别失败文字及语音提示 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <picker bindchange="bindPickerFailChange" value="{{failIndex}}" range="{{failTips}}" >
+            <input name="FailTips" hidden='true' value="{{failIndex}}" />
+            <text>{{failTips[failIndex]}}</text>
+            <image class="right_img" src='../../image/arrow.png'></image>
+          </picker>
+        </view>
+      </view>
+      <view class="btn-area">
+        <button class='nodisabled' form-type="submit">确定</button>
+      </view>
+    </form>
+  </view>
+</view>

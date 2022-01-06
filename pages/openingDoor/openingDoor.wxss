@@ -1,0 +1,65 @@
+/* pages/openingDoor/openingDoor.wxss */
+.container{
+  padding: 0;
+}
+.long-range{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30rpx 80rpx;
+}
+.long-range-model{
+  width:40.5%;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* align-items: center; */
+  margin-bottom: 30rpx;
+  /* padding: 30rpx; */
+  /* height: 200rpx; */
+  /* border: 1rpx solid #ccc; */
+  
+  /* border-radius: 22rpx; */
+}
+.icon{
+   /* width: 40%; */
+   text-align: center;
+}
+.icon>image{
+  width: 98rpx;
+  height: 98rpx;
+}
+.long-range-name{
+  /* width: 60%; */
+  text-align: center;
+}
+
+.no-message{
+  padding-top: 190rpx;
+}
+.no-image{
+  text-align: center;
+}
+.no-image>image{
+  width: 380rpx;
+  height: 358rpx;
+}
+.no-content{
+  margin: 50rpx 0 150rpx 0;
+  text-align: center;
+  color: #666;
+}
+.again-get>button{
+  height: 88rpx;
+  line-height: 2;
+  font-weight: 100;
+  color: #fff;
+  background: #5656ED;
+}
+.set-default-door{
+  margin:14rpx 0 30rpx 0;
+  text-align: center;
+  font-size: 26rpx;
+}
+checkbox{
+  transform:scale(0.72);
+}

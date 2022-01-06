@@ -1,0 +1,30 @@
+/* pages/tipsLog/tipsLog.wxss */
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:#f0f0f0;
+}
+.log-list{
+  padding:0 30rpx;
+  background:#fff;
+  margin-bottom: 30rpx;
+}
+.item-list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding:30rpx 0;
+  border-bottom:1rpx solid #f0f0f0;
+}
+.item-list:last-child{
+  border-bottom:1rpx solid transparent;
+}
+.iten-name{
+  flex-grow: 1;
+}
+.item-value{
+  text-align: right;
+}

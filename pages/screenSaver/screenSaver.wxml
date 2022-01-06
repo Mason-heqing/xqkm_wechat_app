@@ -1,0 +1,43 @@
+<!--pages/screenSaver/screenSaver.wxml-->
+<view class="container">
+  <view class="page-body">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section">
+        <view class="section__title">
+          屏保开关 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <switch checked="{{form.enable}}" bindchange="switchChangeEnable"/>
+          <input type="text" name="enable" hidden="true" value="{{form.enable}}" />
+          <!-- <input name="jobNumber" placeholder-style="color:#999" style="text-align:right;" bindinput='trimJobNumber' maxlength="8" value="{{form.jobNumber}}" placeholder="请输入工号" /> -->
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          进入屏保时间 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <!-- <input name="name" style="text-align:right;" placeholder-style="color:#999" bindinput='trimName' maxlength="24" value="{{form.name}}" placeholder="请输入姓名" /> -->
+          <picker bindchange="bindPickerChangeTimes" value="{{timeIndex}}" range="{{timeName}}" >
+            <input name="time" hidden='true' value="{{timeValue[timeIndex]}}" />
+            <text>{{timeName[timeIndex]}}</text>
+            <image class="right_img" src='../../image/arrow.png'></image>
+          </picker>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          屏保样式 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <picker bindchange="bindPickerChangeStyle" value="{{screenStyleIndex}}" range="{{screenStyleName}}" >
+            <input name="index" hidden='true' value="{{screenStyleValue[screenStyleIndex]}}" />
+            <text>{{screenStyleName[screenStyleIndex]}}</text>
+            <image class="right_img" src='../../image/arrow.png'></image>
+          </picker>
+        </view>
+      </view>
+      <view class="btn-area">
+        <button class='nodisabled' form-type="submit">确定</button>
+      </view>
+    </form>
+  </view>
+</view>
+

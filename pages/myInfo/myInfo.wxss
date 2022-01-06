@@ -1,0 +1,59 @@
+/* pages/myInfo/myInfo.wxss */
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+}
+.page-head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:64rpx 0;
+  background: #fff;
+}
+.page-head>image{
+  width: 260rpx;
+  height: 260rpx;
+  border-radius: 50%;
+}
+.page-body{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+  padding: 30rpx;
+  background: #fff;
+}
+.person-name{
+  flex-grow: 1;
+}
+.input-name{
+  text-align: right;
+}
+.submit{
+  position: absolute;
+  bottom: 200rpx;
+  width: 100%;
+}
+.submit button,button-hover{
+  width: 80%;
+  background: #DA2C1F;
+  color: #fff;
+}
+.nodisabled {
+  background: #DA2C1F !important;
+  color: #fff !important;
+  opacity: 1;
+  box-shadow: 0rpx 10rpx 20rpx rgba(86,86,237,0.3);
+ 
+ }
+ .disabled{
+   background: #DA2C1F !important;
+   color: #fff !important;
+   opacity:0.4;
+   /* font-weight:100 !important; */
+   box-shadow:0px 10rpx 20rpx rgba(86,86,237,0.3);
+ }

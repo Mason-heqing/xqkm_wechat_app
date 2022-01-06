@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wifi-box": "../../components/wifiModel/wifiModel",
+    "tips-box": "../../components/tipsModel/tipsModel"
+  }
+}

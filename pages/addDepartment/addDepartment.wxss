@@ -1,0 +1,6 @@
+/* pages/addDepartment/addDepartment.wxss */
+page{font-size: 28rpx;}
+.dbox{display: flex; flex-direction: row; height: 80rpx; line-height: 80rpx;background-color: aqua;}
+.dname{flex: 2.5;}
+.din{flex: 6.5; }
+button{width: 650rpx;margin: 20rpx auto; background-color: #d9001b;color: #ffffff;}

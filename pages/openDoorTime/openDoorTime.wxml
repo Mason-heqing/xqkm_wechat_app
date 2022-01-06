@@ -1,0 +1,10 @@
+<!--pages/openDoorTime/openDoorTime.wxml-->
+<view class="container">
+  <view class="tool-title">请选择开门确认时间 ( 单位秒 )</view>
+  <view class="tool-content">
+    <slider bindchange="sliderchange" value="{{value}}" min="{{minValue}}" max="{{maxValue}}" show-value/><view class="company"><text>s</text></view>
+  </view>
+  <view class="submit">
+     <button bindtap="submit">确认</button>
+  </view>
+</view>

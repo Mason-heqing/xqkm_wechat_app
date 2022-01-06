@@ -1,0 +1,102 @@
+/* pages/test/test.wxss */
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:#f0f0f0;
+}
+.page-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding:60rpx 30rpx;
+  background-color:#fff;
+}
+.page-body{
+  margin-top: 20rpx;
+}
+.person-name{
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+.person-name>image{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+.person-name text{
+  padding-left: 50rpx;
+}
+.person-details>image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.tool{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding:40rpx 30rpx;
+  background: #fff;
+}
+.tool-name{
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+.tool-name>image,.tool-right>image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.tool-name text{
+  padding-left:20rpx;
+}
+
+/*获取用户信息*/
+.apply-phone{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* padding: 50rpx; */
+}
+.apply-details{
+  padding: 50rpx;
+}
+.apply-title{
+
+}
+.get-permission{
+  padding: 30rpx 0;
+  font-size: 40rpx;
+}
+.main-content{
+  display: flex;
+  align-items: center;
+  padding: 40rpx 0;
+}
+.icon{
+  display: flex;
+  align-items: center;
+}
+.icon>image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.apply-info{
+  margin-left: 30rpx;
+}
+
+.submit{
+  position: absolute;
+  bottom: 200rpx;
+  width: 100%;
+}
+.submit button,button-hover{
+  width: 50%;
+  background: #DA2C1F;
+  color: #fff;
+}

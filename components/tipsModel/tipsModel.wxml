@@ -1,0 +1,13 @@
+<view class="wifiBox" wx:if="{{showBox}}">
+  <!-- 阴影 -->
+  <view class="gbox-mask"></view>
+  <!-- 内容 -->
+  <view class="gbox-content">
+    <view class="gbox-name">温馨提示</view>
+    <view class="gbox-tipstext">
+      设备只支持连接<text class="red">2.4GHz</text>的网络
+    </view>
+    <view class="gbox-btn-close" bindtap="flushModel">好的</view>
+  </view>
+    <!-- 关闭 -->
+</view>  

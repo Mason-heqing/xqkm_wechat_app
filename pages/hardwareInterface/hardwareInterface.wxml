@@ -1,0 +1,132 @@
+<!--pages/hardwareInterface/hardwareInterface.wxml-->
+<view class="container">
+  <view class="page-body">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="infoTitle">硬件接口设置</view>
+      <view class="section">
+        <view class="section__title">
+          控制信号 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <picker bindchange="bindPickerChangeWwitchOutMode" value="{{switchOutModeIndex}}" range="{{switchOutMode}}" >
+            <input name="switchOutMode" hidden='true' value="{{switchOutModeValue[switchOutModeIndex]}}" />
+            <text style="color:{{timesColor}}">{{switchOutMode[switchOutModeIndex]}}</text>
+            <image class="right_img" src='../../image/arrow.png'></image>
+          </picker>
+        </view>
+
+      </view>
+      <!-- <view class="section">
+        <view class="section__title">
+          门磁输入 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="entermode" hidden='true' value="{{entermode}}" />
+          <switch checked="{{switchCheckedEntermode}}" bindchange="switchChangeEntermode"/>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          防拆报警 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="enableGAT" hidden='true' value="{{enableGATValue}}" />
+          <switch checked="{{switchCheckEdenableGAT}}" bindchange="switchChangeEdenableGAT"/>
+        </view>
+      </view> -->
+      <view class="infoTitle">韦根输出</view>
+      <view class="section">
+        <view class="section__title">
+          输出格式 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <picker bindchange="bindPickerTypeChange" value="{{typeIndex}}" range="{{typeName}}" >
+            <input name="typeValue" hidden='true' value="{{typeValue[typeIndex]}}" />
+            <text>{{typeName[typeIndex]}}</text>
+            <image class="right_img" src='../../image/arrow.png'></image>
+          </picker>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          输出内容 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <picker bindchange="bindPickerPutOutTypeChange" value="{{putOutTypeIndex}}" range="{{putOutTypeName}}" >
+            <input name="putOutTypeW" hidden='true' value="{{putOutTypeValue[putOutTypeIndex]}}" />
+            <text>{{putOutTypeName[putOutTypeIndex]}}</text>
+            <image class="right_img" src='../../image/arrow.png'></image>
+          </picker>
+        </view>
+      </view>
+      <view class="infoTitle">韦根输入</view>
+      <view class="section">
+        <view class="section__title">
+          输入格式 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <picker bindchange="bindPickerInputTypeChange" value="{{inputTypeIndex}}" range="{{inputTypeName}}" >
+            <input name="inputType" hidden='true' value="{{inputTypeValue[inputTypeIndex]}}" />
+            <text>{{inputTypeName[inputTypeIndex]}}</text>
+            <image class="right_img" src='../../image/arrow.png'></image>
+          </picker>
+        </view>
+      </view>
+      <view class="infoTitle">485设置</view>
+      <view class="section">
+        <view class="section__title">
+          波特率 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <picker bindchange="bindPickerBaudratenChange" value="{{baudrateIndex}}" range="{{baudratenName}}" >
+            <input name="baudrate" hidden='true' value="{{baudratenValue[baudrateIndex]}}" />
+            <text>{{baudratenName[baudrateIndex]}}</text>
+            <image class="right_img" src='../../image/arrow.png'></image>
+          </picker>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          数据位 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <picker bindchange="bindPickerDatabitChange" value="{{databitIndex}}" range="{{databitName}}" >
+            <input name="databit" hidden='true' value="{{databitValue[databitIndex]}}" />
+            <text>{{databitName[databitIndex]}}</text>
+            <image class="right_img" src='../../image/arrow.png'></image>
+          </picker>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          停止位 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <picker bindchange="bindPickerStopbitChange" value="{{stopbitIndex}}" range="{{stopbitName}}" >
+            <input name="stopbit" hidden='true' value="{{stopbitValue[stopbitIndex]}}" />
+            <text>{{stopbitName[stopbitIndex]}}</text>
+            <image class="right_img" src='../../image/arrow.png'></image>
+          </picker>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          校验 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <picker bindchange="bindPickerChecktypeChange" value="{{checktypeIndex}}" range="{{checktypeName}}" >
+            <input name="checktype" hidden='true' value="{{checktypeValue[checktypeIndex]}}" />
+            <text>{{checktypeName[checktypeIndex]}}</text>
+            <image class="right_img" src='../../image/arrow.png'></image>
+          </picker>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          输出内容 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <picker bindchange="bindPickerPutOutTypeChange" value="{{putOutTypeIndex}}" range="{{putOutTypeName}}" >
+            <input name="putOutTypeS" hidden='true' value="{{putOutTypeValue[putOutTypeIndex]}}" />
+            <text>{{putOutTypeName[putOutTypeIndex]}}</text>
+            <image class="right_img" src='../../image/arrow.png'></image>
+          </picker>
+        </view>
+      </view>
+      <view class="btn-area">
+        <button class='nodisabled' form-type="submit">确定</button>
+      </view>
+    </form>
+  </view>
+</view>
+
+

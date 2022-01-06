@@ -1,0 +1,80 @@
+/* pages/department/department.wxss */
+/* .listbox{overflow: hidden;}
+.departmentlist{width: 100%; height: 50rpx;display: flex; flex-direction: row;line-height: 50rpx; font-size: 28rpx;}
+.dname{flex: 6;}
+.bj{flex: 1;}
+.sz{flex:1;} */
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* padding: 0 30rpx; */
+  background: #f0f0f0;
+}
+.department-header{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 30rpx;
+  border-top:1rpx solid #f0f0f0;
+  background: #fff;
+  font-size: 36rpx;
+}
+.department-header text{
+  padding-left:16rpx;
+}
+.department-header>image{
+  margin-top:10rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.department-body{
+  padding: 0 30rpx;
+  background: #fff;
+  /* max-height:1090rpx; */
+  overflow-y:scroll;
+}
+.department-list{
+  display: flex;
+  flex-direction: row;
+  padding:30rpx 0;
+  border-top:1rpx solid #f0f0f0;
+  background: #fff;
+}
+.item-left{
+  flex-grow: 1;
+  font-size: 36rpx;
+}
+.item-right>image{
+  margin-left: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.crumbs{
+  display: flex;
+  flex-direction: row;
+  padding: 0 10rpx;
+}
+.crumbs-name{
+   display: flex;
+   align-items: center;
+   color: #888;
+   font-size:32rpx;
+   /* padding: 30rpx 0; */
+}
+.crumbs-name text{
+  display: inline-block;
+  padding: 30rpx 20rpx;
+}
+.crumbs-name:last-child image{
+  display: none;
+}
+.crumbs-name>image{
+  width:20rpx;
+  height: 20rpx;
+  
+}

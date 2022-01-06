@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "小Q开门",
+  "usingComponents": {
+    "modal": "/components/secModal/secModal",
+    "tabbar": "../../tabbarComponent/tabbar"
+  }
+}

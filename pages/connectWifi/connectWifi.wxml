@@ -1,0 +1,69 @@
+<!--pages/connectWifi/connectWifi.wxml-->
+<view class="container wifiConnectBox">
+  <!-- wifi 以太网tab 
+  <view class="content_item_row width100" wx:if=false>
+    <view class="radio-group">
+      <view class="radio {{netMode == item.name ? 'activeRadio' : '' }}" wx:for-items="{{netModeItems}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}" bindtap="netConnModeChange" data-item="{{item}}">
+        <text>{{item.value}}</text>
+      </view>
+    </view>
+  </view>
+-->
+  <!-- wifi tab -->
+  <view class="width86" hidden="{{!showWifiConfig}}">
+    <view class="input-item borderLine ssidBox">
+      <image src="../../image/wifi_icon.png" class="input-name-icon"></image>
+      <input class='cert-input-box' placeholder="{{sysinfo === 'Android'?'请选择网络':'请输入网络'}}" bindinput="wifiSsidInput" value='{{ssid}}'></input>
+      <image src="../../image/down.png" class="input-icon {{showWifiListBox?'roate':''}}" bindtap="showWifiList" wx:if="{{sysinfo === 'Android'}}"></image>
+      <!-- wifi列表 -->
+      <wifi-box id="wifi-ref" class="wifiListBox" bind:selectWifi="selecttWifiBtn" bind:flushWifi="flushWifiBtn" wifi-list="{{wifiList}}"></wifi-box>
+    </view>
+    <view class="input-item borderLine">
+      <image src="../../image/clock.png" class="input-name-icon"></image>
+      <input class='cert-input-box' placeholder="请输入Wi-Fi密码" bindinput="wifiPwdInput" value='{{wifiPwdInput}}' type="{{openEyes?'':'password'}}"></input>
+      <image src="{{openEyes?'../../image/eyesOpen.png':'../../image/eyes.png'}}" class="input-icon" bindtap="toggleEyes"></image>
+    </view>
+  </view>
+  <!-- DHCP -->
+  <view class="width86">
+    <view class="marginBottom marginTop content_item_row">
+      <checkbox-group bindchange="wifiDhcpChange" class="marginRight">
+        <label class="checkbox">
+          <checkbox value="true" checked='{{dhcpSelctShow}}'/>自动分配IP
+        </label>
+      </checkbox-group>
+    </view>
+    <view class="content_item width100" hidden="{{!showWifiNoDhcpConfig}}">
+      <view class="borderLine input-item">
+        <image src="../../image/web.png" class="input-name-icon"></image>
+        <input class='input' placeholder="输入IP地址" bindinput="ipInput" value='{{ipInput}}'></input>
+      </view>
+      <view class=" borderLine input-item">
+        <image src="../../image/net.png" class="input-name-icon"></image>
+        <input class='input' placeholder="输入子掩码" bindinput="maskInput" value='{{maskInput}}'></input>
+      </view>
+      <view class="marginBottom input-item">
+        <image src="../../image/ip.png" class="input-name-icon"></image>
+        <input class='input' placeholder="输入网关IP" bindinput="gatewayInput" value='{{gatewayInput}}'></input>
+      </view>
+    </view>
+  </view>
+
+  <!-- 提示 -->
+  <view class="grap"></view>
+  <view class="settingTips marginTop width86" hidden="{{!showWifiConfig}}">
+    <text class="failtip" hidden="{{!failtipshow}}">配置失败，请重新输入WiFi名称与密码!\n</text>
+    <text>输入可连接的WiFi名称与密码，将设备连接至WiFi。\n该WiFi网络需满足以下条件:\n</text>
+    <text>1. 支持<text class="blackBold">2.4G</text>Hz的网络;\n</text>
+    <text>2. 需要web页面认证的<text class="blackBold">Wi-Fi</text>;\n</text>
+    <text>3. 需要证书认证的<text class="blackBold">Wi-Fi</text>。</text>
+  </view>
+  <view class="settingTips width86" hidden="{{showWifiConfig}}">
+    <text>连接有线网络</text>
+  </view>
+  <!-- 网络名称和密码不能为空 || 以太网不选的时候所有值都要填写 -->
+  <view class="loginBtnBox marginBottomBtn  btn-fixed width100 {{ ((showWifiConfig&&ssid&&wifiPwdInput&&(dhcp || (!dhcp&&ipInput&&maskInput&&gatewayInput))) || (showEthConfig && (dhcp || (!dhcp&&ipInput&&maskInput&&gatewayInput)))) ? 'deepBlue':'' }}">
+    <button bindtap="configBLE" class="content_item_item loginBtn">开始配网</button> 
+  </view>
+</view>
+<tips-box id="tips-ref" bind:close="closeTipsBox"></tips-box>

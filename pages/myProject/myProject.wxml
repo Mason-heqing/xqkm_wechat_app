@@ -1,0 +1,27 @@
+<!--pages/myProject/myProject.wxml-->
+<view class="container">
+   <view class="department-header" bindtap="addProject">
+      <image src="../../image/add.png"></image>
+      <text>创建项目</text>
+   </view>
+   <view class="project-search">
+    <view class="info-search">
+    <view class='search'>
+      <input type='text' placeholder='搜素项目名称' confirm-type='search' value="{{inputValue}}" bindinput='inputBind'
+        bindconfirm='query'></input>
+      <image class="" src='../../image/search.png' bindtap='query'></image>
+    </view>
+  </view>
+   </view>
+   <scroll-view class="department-body" scroll-y bindscrolltolower="upper" style='height:{{scrollHeight}}px;'>
+     <view class="department-list" wx:for="{{projectList}}" wx:key="*this" data-appEditStatus="{{item.appEditStatus}}" data-id="{{item.id}}" bindtap="projectSet">
+      <view class="item-left">
+        <view><text>{{item.name}}</text></view>
+        <view><text>code:{{item.code}}</text></view>
+     </view>
+     <view class="item-right">
+       <image src="../../image/arrow.png" bindtap="details"></image>
+     </view>
+     </view>
+   </scroll-view>
+</view>

@@ -1,0 +1,42 @@
+<!--pages/dateTime/dateTime.wxml-->
+<view class="container">
+    <view class="mainbox">
+      <view class="">
+        <view class="">自动同步</view>
+        <view class=""> 
+          <switch color=""   checked="{{switch1Checked}}"/>
+        </view>
+      </view>
+      <view class="">
+        <view class="">时区</view>
+        <view class="">
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+        </view>
+      </view>
+      <view class="">
+        <view class="">日期</view>
+        <view class=""> 
+          <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: 2020-12-28
+    </view>
+  </picker>
+        </view>
+      </view>
+      <view class="">
+        <view class="">时间</view>
+        <view class=""> 
+          <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+    <view class="picker">
+      当前选择: 14：30
+    </view>
+  </picker>
+        </view>
+      </view>
+    </view>
+    <button class="subbutton">确定</button>
+</view>

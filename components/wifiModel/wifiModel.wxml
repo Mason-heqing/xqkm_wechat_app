@@ -1,0 +1,18 @@
+<view class="wifiBox" wx:if="{{showBox}}">
+  <!-- 内容 -->
+  <view class="gbox-content">
+    <view class="touch-scroll">
+      <block wx:for="{{wifiList}}" wx:for-item="wifiItem" wx:for-index="index" wx:key="index" data-item="{{wifiItem}}">
+        <view class='wifi-list-item' data-id="{{wifiItem.SSID}}" bindtap="selecttWifiBtn">
+          <text class="wifi-name">{{wifiItem.SSID}}</text>
+          <view class="wifi-list-icon">
+            <!-- <image src="../../image/block.png" class="wifi-icon"></image> -->
+            <image src="../../image/wifiSinge.png" class="wifi-singe"></image>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="gbox-name">请选择2.4GHz的网络</view>
+  </view>
+    <!-- 关闭 -->
+</view>  

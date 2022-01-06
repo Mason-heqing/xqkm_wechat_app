@@ -1,0 +1,43 @@
+/* pages/fillInLight/fillInLight.wxss */
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+}
+.tool-title{
+  padding: 30rpx;
+  color: #666;
+}
+.tool-content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30rpx 60rpx;
+  background: #fff;
+}
+.tool-content slider{
+  width: 100%;
+  margin-right: 0;
+}
+.company{
+  position: absolute;
+  top:0prx;
+  right:40rpx;
+  padding-left: 10prx;
+  font-size: 28rpx;
+}
+
+.submit{
+  position: absolute;
+  bottom: 200rpx;
+  left: 0;
+  width: 100%;  
+}
+.submit button,button-hover{
+  width: 80%;
+  background: #DA2C1F;
+  color: #fff;
+}

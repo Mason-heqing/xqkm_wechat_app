@@ -1,0 +1,156 @@
+<!-- <view>
+  <view class="titbox">身份信息</view>
+  <view class="informationbox">
+    <view class="inbox">
+    <view class="leftf">*</view>
+    <view class="leftf">姓名</view>
+    <input type="text value" class="leftf" />
+  </view>
+  <view class="inbox">
+    <view class="leftf">*</view>
+    <view class="leftf">姓名</view>
+    <input type="text value" class="leftf" />
+  </view>
+  <view class="inbox">
+    <view class="leftf">*</view>
+    <view class="leftf">姓名</view>
+    <input type="text value" class="leftf" />
+  </view>
+  <view class="inbox">
+    <view class="leftf">*</view>
+    <view class="leftf">姓名</view>
+    <input type="text value" class="leftf" />
+  </view>
+    <view class="inbox">
+      <view class="leftf">*</view>
+      <view class="leftf">姓名</view>
+      <input type="text value" class="leftf" />
+    </view>
+  </view>
+  <view class="titbox">认证方式</view>
+    <view>
+      <view class="inbox">
+        <view class="firstbox"></view>
+        <view class="username">人脸</view>
+        <input type="text" class="" />
+        <view class="endbox">》</view>
+      </view>
+      <view class="inbox">
+        <view class="firstbox"></view>
+        <view class="username">卡号</view>
+        <input type="text" class="" />
+        <view class="endbox">》</view>
+      </view>
+      <view class="inbox">
+        <view class="firstbox"></view>
+        <view class="username">密码</view>
+        <input type="password" class="" />
+        <view class="endbox">》</view>
+      </view>
+  </view>
+  <view class="titbox">通行权限</view>
+  <view>
+      <view class="inbox">
+        <view class="firstbox"></view>
+        <view class="username">授权门禁</view>
+        <input type="password" class="" />
+        <view class="endbox">》</view>
+      </view>
+  </view>
+  
+  <button>确定</button>
+</view> -->
+<view class="container">
+  <view class="page-body">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="infoTitle">身份信息</view>
+      <view class="section">
+        <view class="section__title">
+          姓名 <text class="star">*</text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="personId" type="text" hidden="true" value="{{form.personId}}"/>
+          <input name="name" style="text-align:right;" placeholder-style="color:#999" bindinput='trimName' maxlength="24" value="{{form.name}}" placeholder="请输入姓名" />
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+         工号 <text class="star">*</text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="code" placeholder-style="color:#999" style="text-align:right;" bindinput='trimCode' maxlength="24" value="{{form.code}}" placeholder="请输入工号" />
+        </view>
+      </view>
+      <view class="section" bindtap="selectDepartment">
+        <view class="section__title">
+          部门 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="groupId" hidden='true' value="{{form.groupId}}" />
+          <text>{{form.groupName}}</text>
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          手机 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="phone" placeholder="请输入手机号" bindinput="trimPhone" style="text-align:right;"  value="{{form.phone}}"/>
+        </view>
+      </view>
+      <view class="section" wx:if="{{isFacePic}}">
+        <view class="section__title">
+          身份证号 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="idCard" placeholder-style="color:#999" style="text-align:right;" bindinput='trimIdCard' value="{{form.idCard}}" placeholder="请输入身份证号" />
+        </view>
+      </view>
+      <view class="infoTitle">认证方式</view>
+      <view class="section" bindtap="camera" wx:if="{{isFacePic}}">
+        <view class="section__title">
+          人脸 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="faceId" hidden='true' value="{{form.faceId}}" />
+          <input name="picTempUrl" hidden='true' value="{{form.picTempUrl}}" />
+          <!-- <input name="faceUrl" style="text-align:right;" hidden='true' value="{{form.faceUrl}}"  /> -->
+          <view class="photo">
+            <image src='{{form.picTempUrl}}'></image>
+          </view>
+        </view>
+      </view>
+      <view class="section" bindtap="addCard">
+        <view class="section__title">
+          卡号 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="icCard" hidden='true' value="{{form.icCard}}" />
+          <text>{{form.icCard}}</text>
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+           <view>密码</view>
+           <view class="password-dec">(密码开门必须输入工号)</view>  
+        </view>
+        <view class="section_name" style="text-align:right;">
+          <input type="password" name="password" placeholder-style="color:#999" style="text-align:right;" value="{{form.password}}" maxlength="8" placeholder="请输入密码" />
+        </view>
+      </view>
+      <view class="infoTitle">通行权限</view>
+      <view class="section" bindtap="selectAuthorized">
+        <view class="section__title">
+          授权门禁 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="grantUpdateFlag" hidden="true" value="{{form.grantUpdateFlag}}" />
+          <input name="grantDeviceIdList" hidden="true" style="text-align:right;" value="{{form.grantDeviceIdList}}" />
+          <text>成功数：{{grantSuccessNum}} / 授权总数：{{grantDeviceaNum}}</text>
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view>
+      <view style="width:100%;height:60rpx;border-top:1rpx solid #eee;background:#f0f0f0;"></view>
+      <view class="btn-area">
+        <button wx:if="{{isShowDelete}}" class="del-btn" bindtap="deletePerson">删除</button>
+        <button wx:if="{{namesContent && codeContent}}" class='nodisabled' form-type="submit">确定</button>
+        <button wx:else class='disabled' disabled="true" form-type="submit">确定</button>
+      </view>
+      <view style="width:100%;height:60rpx;border-top:1rpx solid #eee;background:#f0f0f0;"></view>
+    </form>
+  </view>
+</view>

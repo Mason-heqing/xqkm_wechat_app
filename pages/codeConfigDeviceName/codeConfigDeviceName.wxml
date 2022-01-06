@@ -1,0 +1,14 @@
+<!--pages/codeConfigDeviceName/codeConfigDeviceName.wxml-->
+<view>
+  <view class="dbox">
+    <view class="bt">*</view>
+    <view class="dname">项目设备名称</view>
+    <input class="din" type="text" style="text-align:right;" value="{{form.name}}" bindinput='trimName' placeholder="请输入设备名称" />
+    <view class="endbox"></view>
+  </view>
+</view>
+<view class="submit">
+  <button wx:if="{{namesContent}}" class='nodisabled' bindtap="submit">确定</button>
+  <button wx:else class='disabled' disabled="true">确定</button>
+</view>
+

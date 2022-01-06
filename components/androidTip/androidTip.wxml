@@ -1,0 +1,13 @@
+<view class="box" wx:if="{{showBox}}">
+  <!-- 内容 -->
+  <view class="gbox-content">
+    <image src="../../image/androidTips.png" class="androidTips"></image>
+    <view class="android-tip-content">
+      请到 系统设置 -> 设备和隐私 -> GPS服务 -> 提高精确度 \n
+      将WLAN扫描和蓝牙扫描打开后，返回小程序
+    </view>
+    <view class="loginBtnBox btn-fixed marginBottom">
+      <button bindtap="closeModel" class="loginBtn">下一步</button> 
+    </view>
+  </view>
+</view>  

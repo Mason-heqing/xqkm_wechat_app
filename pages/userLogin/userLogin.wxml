@@ -1,0 +1,42 @@
+<!--pages/userLogin/userLogin.wxml-->
+<view class="container">
+  <view class="tips">
+    <view class="tips-item">
+       <view class="tips-icon">
+         <image src="../../image/confirm_one.png"></image>
+       </view>
+       <view class="tips-name">
+          <text>微信授权</text>
+       </view>
+    </view>
+    <view class="tips-item dotted-line">
+      <view class="line"></view>
+    </view>
+    <view class="tips-item dotted-line">
+      <view class="line"></view>
+    </view>
+    <view class="tips-item bind-phone">
+      <view class="tips-icon">
+         <image src="../../image/confirm_two_determined.png"></image>
+       </view>
+       <view class="tips-name">
+          <text>绑定手机号</text>
+       </view>
+    </view>
+  </view>
+  <view class="logo">
+    <image src="../../image/logo.png"></image>
+  </view>
+  <view class="submit">
+    <!-- <button class="subbutton"  open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      <image  src="../../image/wechat.png"></image>
+      <text>微信授权登录</text>
+    </button> -->
+    
+  
+  <button class="subbutton" open-type="getUserInfo" bindtap="getUserProfile">
+    <image  src="../../image/wechat.png"></image>
+    <text>微信授权登录</text>
+  </button>
+  </view>
+</view>

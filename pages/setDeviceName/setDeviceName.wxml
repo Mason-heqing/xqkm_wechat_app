@@ -1,0 +1,31 @@
+<!--pages/setDeviceName/setDeviceName.wxml-->
+<view>
+  <view class="dbox">
+    <view class="bt">*</view>
+    <view class="dname">设备名称</view>
+    <input class="din" type="text" style="text-align:right;" value="{{form.name}}" bindinput='trimName' placeholder="请输入设备名称" />
+    <view class="endbox"></view>
+  </view>
+</view>
+<view class="submit">
+  <button class='isnodisabled ' bindtap="deviceDelete">解除绑定</button>
+  <button wx:if="{{namesContent}}" class='nodisabled' bindtap="submit">确定</button>
+  <button wx:else class='disabled' disabled="true">确定</button>
+</view>
+<view>
+  <button style="width:85%" bindtap="setPassword">超级管理员密码设置</button>
+</view>
+<modal show="{{openSetPassword}}" height='22%' width='80%' bindcancel="modalCancel" bindconfirm='modalConfirm'>
+  <view class='modal-content'>
+    <view class="modal-title">
+      <text>请填密码</text>
+    </view>
+    <view class="model-body">
+      <view class="model-content">
+        <view class="email">
+          <input type="text" value="{{password}}" bindinput="passwordChange" maxlength="8" placeholder="请输入密码" />
+        </view>
+      </view>
+    </view>
+  </view>
+</modal>

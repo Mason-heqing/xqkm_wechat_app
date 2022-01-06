@@ -1,0 +1,288 @@
+/* pages/connectWifi/connectWifi.wxss */
+.connectPage .tips{
+  text-align:center;
+  margin-bottom:30rpx;
+}
+.connectPage .connecting{
+  font-size:32rpx;
+  color:#201000;
+  font-weight:600;
+  letter-spacing: 2rpx;
+}
+.connectPage .closeDv{
+  color:#858585;
+  font-size:24rpx;
+  letter-spacing: 2rpx;
+}
+.connectPage .blueImg{
+  display: block;
+  margin:200rpx auto 80rpx;
+  width:198rpx;
+  height:198rpx;
+}
+.connectPage .dot {
+  height: 8rpx;
+  width: 8rpx;
+  display: inline-block;
+  border-radius: 4rpx;
+  animation: dotting 2.4s  infinite step-start;
+}
+
+@keyframes dotting {
+  25%{
+      box-shadow: 8rpx 0 0 #201000;
+  }
+  50%{
+      box-shadow: 8rpx 0 0 #201000 ,28rpx 0 0 #201000;
+  }
+  75%{
+      box-shadow: 8rpx 0 0 #201000 ,28rpx 0 0 #201000, 48rpx 0 0 #201000;
+  }
+}
+
+.blueImg{
+  display: block;
+  margin:80rpx auto 50rpx;
+  width:198rpx;
+  height:198rpx;
+}
+
+.wifiConnectBox{
+  padding:0 !important;
+}
+
+.content_item_row{
+  display:flex;
+  flex-direction: row;
+  
+  /* height:100rpx; */
+  /* line-height:100rpx; */
+}
+
+/* pages/WifiConnection/WifiConnection.wxss */
+.blueImg{
+  display: block;
+  margin:50rpx auto 40rpx;
+  width:200rpx;
+  height:200rpx;
+}
+.input-name{
+  font-weight: 600;
+  font-size:30rpx;
+  color:#000000;
+  display:inline-block;
+  height:52rpx;
+  line-height: 52rpx;
+}
+.textAlignCenter{
+  text-align:center;
+}
+.macCode{
+  font-size:32rpx;
+  color:#6E6F70;
+  margin-bottom:30rpx;
+  display: block;
+}
+.cert-input-box{
+  display: inline-block;
+  vertical-align:middle;
+  width:440rpx;
+  height:52rpx;
+  line-height: 52rpx;
+  font-size:28rpx;
+  margin-left:40rpx;
+}
+.input-item{
+  height: 100rpx;
+  line-height: 100rpx;
+  width:100%;
+}
+.input-icon{
+  display:inline-block;
+  width:44rpx;
+  height:44rpx;
+  position:relative;
+  top:20rpx;
+  right:-30rpx;
+}
+.loginBtn{
+  /* background-color:#C5E3FD; */
+  background:rgba(0,187,156,0.5);
+  color:#fff;
+  font-size:36rpx;
+  height:94rpx;
+  border:none !important;
+  outline: none;
+  border-radius:48rpx;
+}
+.loginBtn::after{
+  border:none;
+}
+.loginBtnBox{
+  margin-top:60rpx;
+  width:422rpx;
+}
+.settingTips{
+  color:#6E6F70;
+  font-size:11px;
+  font-size:24rpx;
+  line-height: 48rpx;
+}
+
+.content-item-title{
+  font-size:30rpx;
+  color:#000;
+  font-weight: 600;
+  display: inline-block;
+  height:100rpx;
+  line-height:100rpx; 
+}
+.radio{
+  /* margin-right:20rpx; */
+  font-size:30rpx;
+  /* color:#000000; */
+  /* display:inline-block; */
+}
+.input{
+  display:inline-block;
+  font-size:28rpx;
+  vertical-align:middle;
+  margin-left:40rpx;
+  width:480rpx;
+}
+.yitaiIPName{
+  font-size:30rpx;
+  color:#000;
+  display: inline-block;
+  width:140rpx;
+}
+.marginBottom{
+  margin-bottom:30rpx;
+}
+.marginBottomBtn{
+  margin-bottom:120rpx;
+}
+.marginTop{
+  margin-top:30rpx;
+}
+.marginRight{margin-right:40rpx;}
+.btn-fixed{
+  position: fixed;
+  bottom:20rpx;
+  z-index:10;
+  padding: 0 20rpx;
+  height:98rpx;
+  line-height:38rpx;
+  background:#fff;
+  box-sizing: border-box;
+}
+.width100{
+  width:100%;
+}
+.margintop0{
+  margin-top:0;
+}
+.paddingLeft0{
+  padding-left:0;
+}
+.deepBlue button{
+  background:rgba(0,187,156,1);
+  /* background-color:#3396FD; */
+}
+
+
+.radio-group{
+  width:608rpx;
+  height:78rpx;
+  line-height:78rpx;
+  border-radius:39rpx;
+  border:1px solid rgba(0,187,156,1);
+  margin:20rpx auto;
+  display:flex;
+  align-items: center;
+  color:#00BB9C;
+  overflow:hidden;
+  margin-bottom:30rpx;
+}
+.radio-group .radio{
+  flex:1;
+  text-align: center;
+}
+.activeRadio{
+  background:rgba(0,187,156,1);
+  color:#fff;
+}
+.input-name-icon{
+  width:44rpx;
+  height:44rpx;
+  vertical-align: middle;
+}
+.width86{
+  width:86% !important;
+}
+.grap{
+  width:100%;
+  height:10rpx;
+  background:rgba(242,242,242,1);
+}
+.ssidBox{
+  position: relative;
+  z-index:99;
+}
+.wifiListBox{
+  bottom: 0;
+  width: 100%;
+  right: 0;
+  z-index:111;
+  background-color:#fff;
+}
+.blackBold{
+  color:#000;
+  font-weight: 600;
+}
+
+/* 连接云端 */
+.input-name{
+  color:rgba(51, 51, 51, 1);
+  font-size:28rpx;
+  display:inline-block;
+  vertical-align: middle;
+}
+.start{
+  position: relative;
+}
+.start::before{
+  position: absolute;
+  content: '*';
+  font-size:36rpx;
+  color:rgba(247, 21, 21, 1);
+  vertical-align: middle;
+  right:-20rpx;
+  top:3rpx;
+}
+.input-item{
+  height: 100rpx;
+  line-height: 100rpx;
+  width:100%;
+}
+.borderLine{
+  border-bottom:1rpx solid #E7E8EA;
+}
+.radio-box,.weui-cell__bd{
+  display:inline-block;
+}
+.radio-box{
+  margin-left:40rpx;
+}
+.weui-cell__bd{
+  margin-right:40rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.roate{
+  transform:rotate(180deg);
+}
+
+.failtip{
+  color : #f70504;
+}

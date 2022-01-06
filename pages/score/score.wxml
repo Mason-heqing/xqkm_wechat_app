@@ -1,0 +1,15 @@
+<!--pages/score/score.wxml-->
+<view class="container">
+  <view class="tool-title">请选择识别等级</view>
+  <radio-group bindchange="radioChange">
+        <label class="tool-list" wx:for="{{items}}" wx:key="*this">
+          <view class="list-bd">{{item.name}}</view>
+          <view class="list-hd">
+            <radio value="{{item.value}}" checked="{{item.checked}}" />
+          </view>
+        </label>
+  </radio-group>
+  <view class="submit">
+     <button bindtap="submit">确认</button>
+  </view>
+</view>

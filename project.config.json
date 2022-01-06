@@ -1,0 +1,156 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.17.0",
+  "appid": "wx411c203f22ac22cd",
+  "projectname": "%E5%B0%8FQ%E5%BC%80%E9%97%A8",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/person/person",
+          "pathName": "pages/person/person",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addPerson/addPerson",
+          "pathName": "pages/addPerson/addPerson",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/department/department",
+          "pathName": "pages/department/department",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addDepartment/addDepartment",
+          "pathName": "pages/addDepartment/addDepartment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/accessControl/accessControl",
+          "pathName": "pages/accessControl/accessControl",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/authorization/authorization",
+          "pathName": "pages/authorization/authorization",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/upPerson/upPerson",
+          "pathName": "pages/upPerson/upPerson",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/authorizationList/authorizationList",
+          "pathName": "pages/authorizationList/authorizationList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addAuthorization/addAuthorization",
+          "pathName": "pages/addAuthorization/addAuthorization",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/openingRecord/openingRecord",
+          "pathName": "pages/openingRecord/openingRecord",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/openingDoor/openingDoor",
+          "pathName": "pages/openingDoor/openingDoor",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/deviceManagement/deviceManagement",
+          "pathName": "pages/deviceManagement/deviceManagement",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/eqConfig/eqConfig",
+          "pathName": "pages/eqConfig/eqConfig",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/dateTime/dateTime",
+          "pathName": "pages/dateTime/dateTime",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/userLogin/userLogin",
+          "pathName": "pages/userLogin/userLogin",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

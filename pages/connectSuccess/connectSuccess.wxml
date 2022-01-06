@@ -1,0 +1,23 @@
+<!--pages/connectSuccess/connectSuccess.wxml-->
+<view >
+  <view class="connectPage">
+    <view class="tips alignCenter">
+      <image src="../../image/connect.png" alt="" class="blueImg"/>
+      <text class="connecting">配置成功</text>
+      <view class="tips">
+        <text class="closeDv" wx:if="{{needBind}}">配置成功，还需要进行扫码绑定喔！</text>
+        <text class="closeDv" wx:else>请到考勤机端确认是否连接成功</text>
+      </view>
+    </view>
+  </view>
+  <!--
+     <button  bindtap="configJmp">扫描</button> 
+  -->
+  <view class="loginBtnBox btn-fixed marginBottom">
+  <!--
+    <button bindtap="bingwx" class="content_item_item loginBtn" wx:if="{{needBind}}">扫码绑定</button> 
+    -->
+    <navigator type="default" target="miniProgram" open-type="exit" class="loginBtn" >退出</navigator>
+  </view>
+</view>
+

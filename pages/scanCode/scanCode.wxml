@@ -1,0 +1,7 @@
+<!--pages/scanCode/scanCode.wxml-->
+<view class="container">
+  <view class="qrcode-box"></view>
+  <view class="des">
+    <text>将二维码放置框内自动扫码</text>
+  </view>
+</view>

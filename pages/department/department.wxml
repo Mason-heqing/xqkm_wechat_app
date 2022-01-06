@@ -1,0 +1,25 @@
+<!--pages/department/department.wxml-->
+<view class="container">
+   <view class="crumbs" hidden="{{isShowCrumbs}}">
+     <view class="crumbs-name" wx:for="{{crumbsList}}" wx:key="*this">
+       <text class="dep-name" bindtap="changeDepartment" data-index="{{index}}" data-item="{{item}}">{{item.name}}</text>
+       <image src="../../image/arrow.png"></image>
+     </view>
+   </view>
+   <view class="department-body" style="max-height:{{isShowCrumbs?scrollHeight - scrollWidth / 750 * 120:scrollHeight - scrollWidth / 750 * 220}}px">
+     <view class="department-list" wx:for="{{departmentList}}" wx:key="*this" data-item="{{item}}">
+      <view class="item-left">
+        <text>{{item.title}}</text>
+     </view>
+     <view class="item-right">
+       <image src="../../image/edit.png" data-item="{{item}}" bindtap="details"></image>
+       <image src="../../image/branch.png" data-item="{{item}}" bindtap="searchSub"></image>
+       <image src="../../image/delete.png" data-item="{{item}}" bindtap="delete"></image>
+     </view>
+     </view>
+   </view>
+   <view class="department-header" bindtap="addDepartment">
+      <image src="../../image/add.png"></image>
+      <text>添加部门</text>
+   </view>
+</view>

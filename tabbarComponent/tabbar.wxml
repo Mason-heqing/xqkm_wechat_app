@@ -1,0 +1,26 @@
+<view class="tabbar_box {{isIphoneX?'iphoneX-height':''}}" style="background-color:{{tabbar.backgroundColor}}">
+  <block wx:for="{{tabbar.list}}" wx:key="*this">
+    <view wx:if="{{item.isSpecial}}" class="tabbar_nav" hover-class="none" url="{{item.pagePath}}" style="color:{{tabbar.selectedColor}}" bindtap="openDoorTips">
+      <view class='special-wrapper'><image class="tabbar_icon" src="{{item.iconPath}}"></image></view>
+      <image class='special-text-wrapper'></image>
+      <text style="color:#DA2C1F">{{item.text}}</text>
+    </view>
+    <navigator wx:else class="tabbar_nav" hover-class="none" url="{{item.pagePath}}" style="color:{{item.selected ? tabbar.selectedColor : tabbar.color}}" open-type="switchTab">
+      <image class="tabbar_icon" src="{{item.selected ? item.selectedIconPath : item.iconPath}}"></image>
+      <text>{{item.text}}</text>
+    </navigator>
+  </block>
+</view>
+<view class='mask' hidden="{{openDoorMessage}}" bindtap='hiddenMask'>
+  <view class='modal-content' style='height:{{tipsHeight}}px;width:72%' catchtap='stopM'>
+    <scroll-view scroll-y class='main-content'>
+      <view class='modal-content'>
+        <view class="modal-title">
+          <view class="tips-list" wx:for="{{tipsList}}" wx:key="*this">
+             <text>{{index+1}}. </text><text class="{{200 == item.code? '':'red'}}">{{item.msg}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

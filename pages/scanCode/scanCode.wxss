@@ -1,0 +1,15 @@
+/* pages/scanCode/scanCode.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.qrcode-box{
+  width: 480rpx;
+  height: 480rpx;
+  border: 1rpx solid red;
+  margin-bottom: 30rpx;
+}

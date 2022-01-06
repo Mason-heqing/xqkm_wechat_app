@@ -1,0 +1,82 @@
+/* pages/setDeviceName/setDeviceName.wxss */
+page {
+  font-size: 28rpx;
+  background:#f0f0f0;
+}
+
+.dbox {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color:#fff;
+}
+
+.dname {
+  flex: 2.5;
+}
+
+.din {
+  flex: 6.5;
+}
+
+.submit{
+  display: flex;
+  margin-top: 600rpx;
+}
+
+button{
+  width: 650rpx;
+  margin: 20rpx auto;
+  background-color: #d9001b;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.nodisabled {
+  background: #DA2C1F !important;
+  color: #fff !important;
+  opacity: 1;
+  box-shadow: 0rpx 10rpx 20rpx rgba(86,86,237,0.3);
+  /* background: rgb(237,220,219);
+  color: #DA2C1F; */
+  border-color: rgb(237,220,219);
+ }
+ .disabled{
+   background: #DA2C1F !important;
+   color: #fff !important;
+   opacity:0.4;
+   /* font-weight:100 !important; */
+   box-shadow:0px 10rpx 20rpx rgba(86,86,237,0.3);
+ }
+ .isnodisabled{
+  background: #DA2C1F !important;
+  color: #fff !important;
+   opacity:0.4;
+   box-shadow: 0rpx 10rpx 20rpx rgba(86,86,237,0.3);
+ }
+ button{
+   width: 35%;
+ }
+ .modal-title{
+  border-bottom: 1rpx solid #ccc;
+  padding: 30rpx;
+}
+.model-body{
+  display: flex;
+  align-items: center;
+  height:170rpx;
+  line-height: 170rpx;
+  text-align: center;
+}
+.model-content{
+  width: 100%;
+  padding: 30rpx;
+}
+.email>input{
+  text-align:left;
+   padding: 18rpx;
+   border: 1rpx solid #ccc;
+   text-align: center;
+}

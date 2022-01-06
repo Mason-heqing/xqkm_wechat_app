@@ -1,0 +1,48 @@
+/* pages/doorDelayTime/doorDelayTime.wxss */
+page {
+  font-size: 28rpx;
+  background:#f0f0f0;
+}
+
+.dbox {
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color:#fff;
+}
+
+.dname {
+  flex: 2.5;
+}
+
+.din {
+  flex: 6.5;
+}
+
+.submit{
+  margin-top: 600rpx;
+}
+
+button{
+  width: 650rpx;
+  margin: 20rpx auto;
+  background-color: #d9001b;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.nodisabled {
+  background: #DA2C1F !important;
+  color: #fff !important;
+  opacity: 1;
+  box-shadow: 0rpx 10rpx 20rpx rgba(86,86,237,0.3);
+ 
+ }
+ .disabled{
+   background: #DA2C1F !important;
+   color: #fff !important;
+   opacity:0.4;
+   /* font-weight:100 !important; */
+   box-shadow:0px 10rpx 20rpx rgba(86,86,237,0.3);
+ }

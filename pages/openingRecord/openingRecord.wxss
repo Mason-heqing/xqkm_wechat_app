@@ -1,0 +1,264 @@
+/* pages/openingRecord/openingRecord.wxss */
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+}
+
+/* .topbox {
+  padding: 30rpx;
+  background-color: #ffffff;
+}*/
+.openDoor-search{
+  display: flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/*搜索*/
+.info-search{
+  /* position: fixed; */
+  display: flex;
+  width: 100%;
+  padding: 40rpx 30rpx;
+  background-color: #fff;
+  z-index: 999;
+  /* border-bottom:1rpx solid #f0f0f0; */
+}
+.search{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center; 
+  width:78%;
+  height:80rpx;
+  background-color:whitesmoke;
+  border:1rpx solid #ddd;
+  border-radius: 20rpx;
+}
+.search input{
+  width: 80%;
+  font-size:27rpx;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left:30rpx; 
+}
+.search image{ 
+  width:40rpx;
+  height:40rpx;
+  padding-right:20rpx;
+}
+
+.screenbox {
+  position: absolute;
+  /* top:30rpx; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  justify-content: space-between;
+  background: #fff;
+}
+.searchbox>image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.mainbox{
+  position: absolute;
+  top:163rpx;
+  width: 100%;
+}
+.mainbox-head{
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.exportbox{
+  /* display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx 0; */
+  width: 22%;
+  height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    background: rgb(245,245,245);
+    color: #999;
+    border-radius: 20rpx;
+    border: 1rpx solid #ddd;
+    margin-left: 10rpx;
+
+  /* width: 20%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: rgb(245, 245, 245);
+    text-align: center;
+    color: #999;
+    margin-left: 18rpx;
+    border-radius: 20rpx;
+    border: 1rpx solid #ddd;
+    padding: 40rpx 0; */
+}
+
+.exportbox>image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.exportbox text{
+  padding-left: 20rpx;
+}
+
+.times{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 370rpx;
+  background: #eee;
+  margin-left: 30rpx;
+}
+
+.times-icon{
+  padding-left:10rpx;
+}
+.times-icon>image{
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.datepick>image{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.equipmentpick {
+  width: 370rpx;
+}
+.equipmentpick text{
+  padding-right:10rpx;
+}
+.equipmentpick image{
+  width: 24rpx;
+  height: 20rpx;
+}
+
+.openingRecord {
+  position: absolute;
+  top:80rpx;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.listbox {
+  display: flex;
+  flex-direction: row;
+  padding: 30rpx 0;
+  /* overflow: hidden; */
+  /* height: 160rpx; */
+  border-bottom: 2rpx solid #f0f0f0
+}
+
+.captureimg {
+  flex: 3;
+  text-align: center;
+}
+
+.captureimg image {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.opinformation {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.opinformation view {
+  flex: 3;
+}
+
+.opmode {
+  display: flex;
+  align-items: flex-end;
+  flex: 2;
+  text-align: center;
+  padding: 10rpx;
+  font-size: 34rpx;
+  /* line-height: 270rpx; */
+}
+.item-name{
+  font-size: 32rpx;
+  /* font-weight: bolder; */
+  color: #181818;
+}
+
+.item-address,.item-times{
+  display: flex;
+  align-items: center;
+  color: #787878;
+}
+.item-address>image{
+  width: 22rpx;
+  height: 30rpx;
+}
+.item-times>image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.item-address text,.item-times text{
+  padding-left:12rpx;
+}
+.refresh{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 0 30rpx;
+}
+.refresh>image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.modal-title{
+  border-bottom: 1rpx solid #ccc;
+  padding: 30rpx;
+}
+.model-body{
+  display: flex;
+  align-items: center;
+  height:230rpx;
+  line-height: 170rpx;
+  text-align: center;
+}
+.model-content{
+  width: 100%;
+  padding: 30rpx;
+}
+/* .email{
+  padding: 50rpx 0;
+} */
+.email>input{
+  text-align:left;
+   padding: 18rpx;
+   border: 1rpx solid #ccc;
+   text-align: center;
+}
+.ex-checkbox{
+  height: 50rpx;
+}
+
+.picker,.equipmentpick{
+  color:#787878;
+  background: #eee;
+  margin-right: 30rpx;
+}

@@ -1,0 +1,43 @@
+<view class="person-manage">
+  <view class="person-header">
+    <view class="header-item wechat-share">
+      <button class="share" open-type='share'></button>
+      <image src="../../image/wechat_invitation.png"></image>
+    </view>
+    <view class="header-item" bindtap="manualAdd">
+      <image src="../../image/manual_add.png"></image>
+    </view>
+    <view class="header-item" bindtap="department">
+      <image src="../../image/department_set.png"></image>
+    </view>
+  </view>
+  <!-- <view class="person-num">人员({{personNum}})</view> -->
+  <view class="person-search">
+    <view class="info-search">
+    <view class='search'>
+      <input type='text' placeholder='搜素姓名/工号/部门' confirm-type='search' value="{{inputValue}}" bindinput='inputBind'
+        bindconfirm='query'></input>
+      <image class="" src='../../image/search.png' bindtap='query'></image>
+    </view>
+    <view class="person-num" bindtap='query'>{{personNum}}</view>
+  </view>
+  </view>
+  <scroll-view class="page-body"  scroll-y bindscrolltolower="upper" style='height:{{scrollHeight}}px;'>
+    <view class="personList" wx:for="{{personList}}" wx:key="*this" data-personId="{{item.personId}}"
+      bindtap="personDetails" data-groupName="{{item.groupName}}">
+      <view class="leftf person-name" wx:if="{{'' == item.faceId}}">
+        <image wx:if="{{isFacePic}}" class="personimg" src="/image/default_face.png" alt="人脸图片" />
+        <text>{{item.name}}</text>
+      </view>
+      <view class="leftf person-name" wx:else>
+        <image wx:if="{{isFacePic}}" class="personimg" src="{{dataUrl}}{{faceUrl}}{{item.faceId}}" alt="人脸图片" />
+        <text>{{item.name}}</text>
+      </view>
+      <view class="leftf job-number">{{item.jobNumber}}</view>
+      <view class="leftf person-department">
+        <view wx:if="{{'' != item.groupName}}" class="department">{{item.groupName}}</view>
+        <view wx:else>{{item.groupName}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

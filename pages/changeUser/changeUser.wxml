@@ -1,0 +1,21 @@
+<!--pages/changeUser/changeUser.wxml-->
+<view class="container">
+  <view class="info-search">
+    <view class='search'>
+      <input type='text' placeholder='搜素管理员姓名' confirm-type='search' value="{{inputValue}}" bindinput='inputBind'
+        bindconfirm='query'></input>
+      <image class="" src='../../image/search.png' bindtap='query'></image>
+    </view>
+  </view>
+  <radio-group bindchange="radioChange">
+        <label class="tool-list" wx:for="{{items}}" wx:key="*this">
+          <view class="list-bd">{{item.name}}</view>
+          <view class="list-hd">
+            <radio value="{{item.value}}"/>
+          </view>
+        </label>
+  </radio-group>
+  <view class="submit">
+     <button bindtap="submit">确认</button>
+  </view>
+</view>

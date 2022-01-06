@@ -1,0 +1,60 @@
+<!--pages/bluetoothSearch/bluetoothSearch.wxml-->
+<view >
+  <view class="connectPage">
+    <view class="tips alignCenter" wx:if="{{bleConnnectting && !initBleSuccess}}">
+      <image src="../../image/bluetooth.png" alt="" class="blueImg"/>
+      <text class="connecting" wx:if="{{!isFromWxCode}}">蓝牙连接中</text><text class="dot" wx:if="{{!isFromWxCode}}"></text>
+      <text class="connecting" wx:if="{{isFromWxCode && bleScanning && !bleWxConnectting}}">蓝牙扫描中</text><text class="dot" wx:if="{{isFromWxCode && bleScanning && !bleWxConnectting}}"></text>
+      <text class="connecting" wx:if="{{isFromWxCode && !bleScanning && !bleWxConnectting}}">蓝牙扫描完成</text>
+      <text class="connecting" wx:if="{{isFromWxCode && bleWxConnectting}}">蓝牙连接中</text><text class="dot" wx:if="{{isFromWxCode && bleWxConnectting}}"></text>
+      <view class="tips">
+        <text class="closeDv" wx:if="{{isFromWxCode && bleFindSn && !bleWxConnectting}}">请选择需配置的SN号,点击连接</text>
+        <text class="closeDv" wx:else>请将手机靠近设备1米内</text>
+      </view>
+    </view>
+
+    <view class="tips alignCenter" wx:if="{{initBleSuccess}}">
+      <image src="../../image/bluetooth.png" alt="" class="blueImg"/>
+      <text class="connecting">蓝牙连接成功</text>
+    </view>
+    <view class="tips alignCenter" wx:if="{{!bleConnnectting && !initBleSuccess}}">
+      <image  src="../../image/fail.png" alt="" class="blueImg" />
+      <text class="connecting" wx:if="{{!bleScanning}}">蓝牙连接失败</text>
+      <text class="connecting" wx:if="{{bleScanning}}">蓝牙扫描失败</text>
+      <view class="tips closeDv">
+        {{errorInfo}}，打开后点击<text class="blue" bindtap="bleStart">重试</text>
+      </view>
+    </view>
+    <!--
+    <view class="loginBtnBox btn-fixed width100" wx:if="{{initBleSuccess}}">
+      <button bindtap="next" class="content_item_item loginBtn">下一步</button> 
+    </view>
+-->
+    <view class="bleList" wx:if="{{snrList.length > 0}}">
+      <view class="list" wx:for="{{snrList}}" wx:key="index">
+        <text class="bleName">SN:{{item.snr}}</text>
+        <text class="bleListBtn" data-id="{{item.deviceId}}" data-sn="{{item.snr}}" bindtap="connectBtn">连接</text>
+      </view>
+    </view>
+
+  </view>
+</view>
+<!-- 安卓打开蓝牙提示 -->
+<android-tip id="android-tip" bind:bleStart="bleStart"></android-tip>
+<!-- <view class="container">
+   <view class="bluetooth-icon">
+     <image src="../../image/bluetooth.png"></image>
+   </view>
+   <view class="des">
+     <view class="search-status" wx:if="{{0 === bluetoothStatus}}">
+       <text>正在扫描设备</text>
+     </view>
+     <view class="search-status" wx:elif="{{1 === bluetoothStatus}}">
+       <text>蓝牙连接中</text>
+     </view>
+     <view class="search-status" wx:else>
+       <text>蓝牙已连接</text>
+     </view>
+     <text class="dec-content">请将手机置于搜索2米范围内</text>
+   </view>
+</view> -->

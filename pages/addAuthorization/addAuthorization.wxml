@@ -1,0 +1,39 @@
+<!--pages/addAuthorization/addAuthorization.wxml-->
+<view class="container">
+  <view class="authorization-search">
+    <view class="info-search">
+    <view class='search'>
+      <input type='text' placeholder='搜素姓名/工号/部门' confirm-type='search' value="{{inputValue}}" bindinput='inputBind'
+        bindconfirm='query'></input>
+      <image class="" src='../../image/search.png' bindtap='query'></image>
+    </view>
+  </view>
+  </view>
+  <view class="mainbox">
+      <view class="allcheckbox">
+        <view class="allSelect">全选</view>
+        <checkbox  value="all" checked="{{allSelect}}" bindtap="selectall" />
+      </view>
+      <scroll-view class="" scroll-y bindscrolltolower="upper" style='height:{{scrollHeight}}px;'> 
+        <checkbox-group bindchange="checkboxChange">
+          <label for="" class="checkbox" wx:for="{{list}}" wx:key="*this"  >
+        <view class="listbox">
+          <view class="headbox" wx:if="{{'' != item.personId}}">
+            <image wx:if="{{isFacePic}}" src="{{dataUrl}}{{faceUrl}}{{item.personId}}"></image>
+          </view>
+          <view class="headbox" wx:else>
+            <image wx:if="{{isFacePic}}" src="../../image/default_face.png"></image>
+          </view>
+          <view class="aname">{{item.name}}</view> 
+          <view class="cbbox">
+              <checkbox value="{{item.personId}}" checked="{{item.checked}}"/>
+          </view>
+        </view>
+      </label>
+      </checkbox-group>
+      </scroll-view>
+  </view>
+   <view class="submit">
+    <button class="subbutton" bindtap="submit">确定({{personNum}})</button>
+   </view>
+</view>

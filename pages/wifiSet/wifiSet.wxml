@@ -1,0 +1,57 @@
+<!--pages/wifiSet/wifiSet.wxml-->
+<view class="container">
+  <view class="is-open-wifi">
+     <view class="tool-name">
+       <text>开启WIFI</text>
+     </view>
+     <view class="is-switch" wx:if="{{isClickCheck}}">
+      <switch color="#4DD865" checked="{{switchChecked}}" bindchange="switchChange"/>
+     </view>
+     <view class="is-switch" wx:else>
+      <switch color="#4DD865" disabled="true" />
+     </view>
+  </view>
+  <view class="save-wifi" wx:if='{{"" != currentName}}'>
+    <text>保存的WIFI</text>
+  </view>
+  <view class="save-name" wx:if='{{"" != currentName}}'>
+    <view class="current-name">{{currentName}}</view>
+    <view class="current-icon">
+       <image src="../../image/wifi_icon.png"></image>
+    </view>
+  </view>
+  <view class="save-wifi">
+    <text>附近的WIFI</text>
+  </view>
+  <view class="nearby-search" wx:for="{{wifiList}}" wx:key="*this" data-ssid="{{item.ssid}}" bindtap="setPassword">
+     <view class="item-name">{{item.ssid}}</view>
+     <view class="nearby-icon">
+       <image src="../../image/wifi_icon.png" wx:if="{{3 == item.sig_str}}"></image>
+       <image src="../../image/wifi_in_the_signal.png" wx:elif="{{2 == item.sig_str}}"></image>
+       <image src="../../image/wifi_weak_signal.png" wx:else></image>
+     </view>
+  </view>
+</view>
+<view class='mask' hidden="{{openDoorMessage}}" bindtap='hiddenMask'>
+  <view class='modal-content' style='height:224px;width:72%' catchtap='stopM'>
+    <scroll-view scroll-y class='main-content'>
+      <view class='modal-content'>
+        <view class="modal-title">
+          <text>设置WIFI密码</text>
+        </view>
+        <view class="model-body">
+          <view class="model-content">
+            <!-- <text bindinput="inputPassword">{{residenInfo.devicePassword}}</text> -->
+            <input type="text" value="{{wifiPassword}}" bindinput='trimWifiPassword' />
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <view class="modal-btn-close" catchtap='clickMask'>
+      <image src="../../image/close_icon.png"></image>
+    </view>
+    <view class="changePassword">
+      <button bindtap="changePasswrd">确定</button>
+    </view>
+  </view>
+</view>

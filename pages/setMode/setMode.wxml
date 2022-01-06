@@ -1,0 +1,63 @@
+<!--pages/setMode/setMode.wxml-->
+<view >
+  <view class="connectPage">
+    <view class="tips alignCenter">
+      <image src="../../image/mode.png" alt="" class="blueImg"/>
+    </view>
+    <view class="content_item width100">
+      <view class="input-item">
+        <text class="input-name">安  全  性:</text>
+        <radio-group bindchange="scoreChange" class="radio-box">
+          <label class="weui-cell weui-check__label" wx:for="{{scoreSwitch}}" wx-for-key="index" wx:key="index">
+            <radio value="{{item.value}}" checked="{{item.checked}}"/>
+            <view class="weui-cell__bd">{{item.name}}</view>
+          </label>
+        </radio-group>
+      </view>
+      <view class="settingTips width100">
+        <text>提示：安全性低，识别速度快; 安全性高，误识率低。</text>
+      </view>
+      <view class="input-item">
+        <text class="input-name">活体开关:</text>
+        <radio-group bindchange="livingSwitchChange" class="radio-box">
+          <label class="weui-cell weui-check__label" wx:for="{{livingSwitch}}" wx-for-key="index" wx:key="index">
+            <radio value="{{item.value}}" checked="{{item.checked}}"/>
+            <view class="weui-cell__bd">{{item.name}}</view>
+          </label>
+        </radio-group>
+      </view>
+      <view class="settingTips width100">
+        <text>提示：活体开关打开可防止照片、面具、视频代打卡。</text>
+      </view>
+      <!--
+      <view class="input-item" >
+        <text class="input-name">连接方式:</text>
+        <radio-group bindchange="connectModelChange" class="radio-box">
+          <label class="weui-cell weui-check__label" wx:for="{{connectModelSwitch}}" wx-for-key="index" wx:key="index">
+            <radio value="{{item.value}}" checked="{{item.checked}}"/><view class="weui-cell__bd">{{item.name}}</view>
+          </label>
+        </radio-group>
+      </view>
+      -->
+      <view class="input-item" hidden="{{workWay != '2'}}">
+        <text class="input-name">网络地址:</text>
+        <input class='input' placeholder="请输入局域网地址" bindinput="LANUrlInput" value='{{LANUrl}}'></input>
+      </view>
+    </view>
+    <!-- 提示 -->
+    <view class="container wifiConnectBox content_item" hidden="{{workWay != '2'}}">
+      <view class="settingTips width100">
+        <text>提示：请输入格式为：ws://域名:端口/xxx/xxx</text>
+      </view>
+    </view>
+    <view class="container wifiConnectBox">
+      <view class="grap"></view>
+      <view class="settingTips width100 ">
+        <text class="red paddingleft52">无特殊要求可保持当前默认设置即可。</text>
+      </view>
+    </view>
+    <view class="loginBtnBox btn-fixed width100">
+      <button bindtap="next" class="content_item_item loginBtn">下一步</button> 
+    </view>
+  </view>
+</view>

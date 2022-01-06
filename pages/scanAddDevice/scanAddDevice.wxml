@@ -1,0 +1,19 @@
+<!--pages/scanAddDevice/scanAddDevice.wxml-->
+<view>
+  <view class="dbox" wx:if="{{'0' == isNoBle}}">
+    <view class="bt">*</view>
+    <view class="dname">项目名称</view>
+    <input class="din" type="text" style="text-align:right;" value="{{form.appName}}" bindinput='trimAppName' placeholder="请输入项目名称" />
+    <view class="endbox"></view>
+  </view>
+  <view class="dbox">
+    <view class="bt">*</view>
+    <view class="dname">项目设备名称</view>
+    <input class="din" type="text" style="text-align:right;" value="{{form.deviceName}}" bindinput='trimDeviceName' placeholder="请输入设备名称" />
+    <view class="endbox"></view>
+  </view>
+</view>
+<view class="submit">
+  <button wx:if="{{appNamesContent && deviceNamesContent}}" class='nodisabled' bindtap="submit">确定</button>
+  <button wx:else class='disabled' disabled="true">确定</button>
+</view>

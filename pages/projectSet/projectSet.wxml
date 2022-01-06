@@ -1,0 +1,41 @@
+<!--pages/projectSet/projectSet.wxml-->
+<view class="container">
+  <view class="page-body">
+    <form>
+      <view class="section" bindtap="setProjectName">
+        <view class="section__title">
+          项目名称 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="name" style="text-align:right;" value="{{appName}}" />
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view>
+      <view class="infoTitle">管理员</view>
+      <view class="section" bindtap="editUser">
+        <view class="section__title">
+         {{parentAdminName}} <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <text>变更</text>
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view>
+      <view class="infoTitle">
+        <text>子管理员</text>
+        <text>（{{childrenNum}}/10）</text>
+        <text bindtap="editSubUser" style="color:red;">编辑子管理员</text>
+      </view>
+      <view class="section" wx:for="{{childAdminMap}}" wx:key="*this">
+        <view class="section__title">
+          {{item.name}} <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;" data-id="{{item.value}}" bindtap="delete">
+          <image class="right_img" src='../../image/delete.png'></image>
+        </view>
+      </view>
+      <view style="width:100%;height:60rpx;border-top:1rpx solid #eee;background:#f0f0f0;"></view>
+      <view class="btn-area">
+        <button class='nodisabled' bindtap="submit">注销项目</button>
+      </view>
+      <view style="width:100%;height:60rpx;border-top:1rpx solid #eee;background:#f0f0f0;"></view>
+    </form>
+  </view>
+</view>

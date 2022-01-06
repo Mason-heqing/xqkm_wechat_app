@@ -1,0 +1,67 @@
+
+.gbox-mask{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.70);
+  z-index:9998;
+}
+.gbox-content{
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  width: 78%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 12rpx;
+  z-index:9999;
+  overflow: hidden;
+}
+.gbox-name{
+  background-color:#DBDBDB;
+  text-align:center;
+  font-size:30rpx;
+  color:#000000;
+  font-weight: 600;
+  height:84rpx;
+  line-height:84rpx;
+}
+.wifi-icon{
+  display: inline-block;
+  width:28rpx;
+  height:32rpx;
+}
+.wifi-singe{
+  display:inline-block;
+  width:42rpx;
+  height:32rpx;
+  margin-left:20rpx;
+}
+
+
+.gbox-btn-close{
+  background-color:#DBDBDB;
+  height:73rpx;
+  color:#3396FD;
+  line-height: 74rpx;
+  text-align: center;
+  font-size:30rpx;
+  font-weight: 600;
+}
+
+.gbox-tipstext{
+  background-color:#fff;
+  width:100%;
+  max-height: 576rpx;
+  padding:60rpx 20rpx;
+  box-sizing: border-box;
+  text-align: center;
+  font-size:32rpx;
+}
+.red{
+  color:red;
+  font-size:36rpx;
+  font-weight: bold;
+}

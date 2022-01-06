@@ -1,0 +1,57 @@
+<!--pages/limitedSet/limitedSet.wxml-->
+<view class="container">
+  <view class="page-body">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section">
+        <view class="section__title">
+          DHCP <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="DHCP" type="text" hidden='true' value="{{form.switchChecked}}" />
+          <switch checked="{{form.switchChecked}}" bindchange="switchChange"/>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+         IP地址 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="ip" placeholder-style="color:#999" style="text-align:right;" bindinput='trimIp' value="{{form.ip}}" placeholder="请输入IP地址" />
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          子网掩码 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="mask" placeholder-style="color:#999"  value="{{form.mask}}" style="text-align:right;" placeholder="请输入子网掩码" />
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          默认网关 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="gateway" placeholder-style="color:#999" style="text-align:right;" bindinput='trimPhone' value="{{form.gateway}}" placeholder="请输入默认网关" />
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          DNS服务器 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="DNS" placeholder-style="color:#999" style="text-align:right;" value="{{form.DNS}}" placeholder="请输入DNS服务器" />
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          备用DNS服务器 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="spareDNS" value="{{form.spareDNS}}" placeholder-style="color:#999" placeholder="请输入备用DNS服务器" style="text-align:right;" />
+          <!-- <input name="faceUrl" style="text-align:right;" hidden='true' value="{{form.faceUrl}}"  /> -->
+        </view>
+      </view>
+      <view style="width:100%;height:60rpx;border-top:1rpx solid #eee;background:#f0f0f0;"></view>
+      <view class="btn-area">
+        <button class='nodisabled' form-type="submit">确定</button>
+      </view>
+      <view style="width:100%;height:60rpx;border-top:1rpx solid #eee;background:#f0f0f0;"></view>
+    </form>
+  </view>
+</view>
+

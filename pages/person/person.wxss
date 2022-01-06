@@ -1,0 +1,186 @@
+/* pages/person/person.wxss */
+.person-manage{
+  /* padding: 0 24rpx; */
+}
+.person-header{
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 30rpx 0 10rpx 0;
+}
+.header-item{
+  width: 33.3333%;
+  height: 140rpx;
+  text-align: center;
+}
+.header-item>image{
+  width: 246rpx;
+  height: 140rpx;
+}
+.person-num{
+  /* position: absolute;
+  top:180rpx; */
+  width:20%;
+  /* padding: 0 20rpx; */
+  /* padding-left: 20rpx;
+  margin-right: 10rpx; */
+  height: 80rpx;
+  line-height: 80rpx;
+  background: rgb(245, 245, 245);
+  text-align: center;
+  color:#999;
+  margin-left: 18rpx;
+  border-radius: 20rpx;
+  border: 1rpx solid #ddd;
+}
+.searchbox{
+  position: relative;
+  padding: 0 40rpx;
+  
+}
+.searchbox>image{
+  position: absolute;
+  top: 20rpx;
+  left: 68rpx;
+  width: 42rpx;
+  height: 42rpx;
+}
+.searchbox>input{
+  /* width: ;; */
+  padding: 0 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  background-color: #eeeeee;
+  margin: 0 auto;
+  font-size: 14px;
+  text-align: left;
+  margin: 20rpx auto;
+  font-size: 30rpx;
+}
+
+.personList {
+  display:flex;
+  /* overflow: hidden; */
+  border-bottom: 2rpx solid #eeeeee;
+  /* height: 80rpx;
+  padding-top: 20rpx; */
+  padding: 30rpx;
+}
+
+.person-name{
+  display: flex;
+  align-items: center;
+}
+
+.person-name text{
+  padding-left: 20rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.person-department{
+  display:flex;
+  justify-content:flex-end;
+  align-items: center;
+}
+
+.leftf{
+  width: 33.3333%;
+}
+
+.job-number{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.personimg {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.department {
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background-color:rgb(134,179,220);
+  border-radius:10rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+.wechat-share{
+  position: relative;
+}
+.share{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 246rpx;
+  height: 140rpx;
+  background:transparent;
+  color: transparent;
+  border: none;
+  outline:none;
+}
+button.share::after {
+  border: none;
+}
+.button-hover {
+  background-color: transparent;
+}
+.page-body{
+  position: absolute;
+  top:304rpx;
+  width: 100%;
+  overflow:scroll;
+}
+
+.person-search{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 160rpx;
+  width: 100%;
+}
+
+/*搜索*/
+.info-search {
+  /* position: fixed; */
+  display: flex;
+  width: 100%;
+  padding: 40rpx 20rpx;
+  background-color: #fff;
+  z-index: 999;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 80rpx;
+  background-color: whitesmoke;
+  border: 1rpx solid #ddd;
+  border-radius: 20rpx;
+}
+
+.search input {
+  width: 80%;
+  font-size: 27rpx;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 30rpx;
+}
+
+.search image {
+  width: 40rpx;
+  height: 40rpx;
+  padding-right: 20rpx;
+}

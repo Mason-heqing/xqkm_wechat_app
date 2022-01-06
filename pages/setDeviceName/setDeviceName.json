@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "modal": "/components/secModal/secModal"
+  },
+  "navigationBarTitleText": "设备名称"
+}

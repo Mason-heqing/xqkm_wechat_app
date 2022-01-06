@@ -1,0 +1,76 @@
+/* pages/userLogin/userLogin.wxss */
+.container {
+  /* padding: 200rpx 0; */
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; */
+  
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:158rpx;
+}
+
+.logo>image {
+  width: 220rpx;
+  height: 220rpx;
+}
+
+.submit {
+  padding-top: 300rpx;
+}
+
+.subbutton {
+  /* width: 650rpx; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 78%;
+  margin: 20rpx auto;
+  background-color: #d9001b;
+  border-radius: 60rpx;
+  color: #ffffff;
+}
+.subbutton>image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.subbutton text{
+  padding-left: 20rpx;
+}
+
+.tips{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 50rpx 0;
+  box-shadow: 0px 6px 12px rgba(39, 39, 39, 0.08);
+}
+
+.tips-item{
+  width: 150rpx;
+  text-align: center;
+}
+
+.tips-icon>image{
+  width: 38rpx;
+  height: 38rpx;
+}
+.dotted-line{
+  display: flex;
+  align-items: center;
+  width: 120rpx !important;
+}
+.dotted-line .line{
+  width: 100%;
+  height: 2rpx;
+  border-top: 1rpx solid red;
+}
+.bind-phone{
+  padding-left:16rpx;
+}

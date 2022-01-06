@@ -1,0 +1,17 @@
+<!--pages/addDepartment/addDepartment.wxml-->
+<view>
+  <view class="dbox">
+    <view class="bt">*</view>
+    <view class="dname">部门名称</view>
+    <input class="din" type="text" value="" placeholder="请输入部门名称" />
+    <view class="endbox"></view>
+  </view>
+  <view class="fgx"></view>
+  <view class="dbox">
+    <view class="bt">*</view>
+    <view class="dname">上级部门</view>
+    <input class="din" type="text" value="" placeholder="请输入部门名称" disabled="false" />
+    <view class="endbox">》</view>
+  </view>
+</view>
+<button>确定</button>

@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="page-section">
+      <view wx:if="{{isProject}}" class="select-adress"  bindtap="projectChange">
+        <view class="adress-content">
+          <image class="location" src="../../image/home_navigation.png"></image>
+          <text>{{currentProject}}</text>
+          <image class="triangle" src="../../image/triangle.png"></image>
+        </view>
+      </view>
+      <view wx:else class="select-adress noAddress" bindtap="selectAdress">
+        <image class="location" src="../../image/home_navigation.png"></image>
+        <text class="select-text">请选择</text>
+      </view>
+    </view>
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActivecolor}}"      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{bannerImg}}" wx:key="index">
+          <swiper-item>
+            <view class="swiper-item">
+              <image src="{{item}}"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="page-section">
+      <view class="tool">
+        <view class="tool-model" wx:for="{{tool}}" wx:key="index" wx:if="{{item.jurisdiction}}">
+          <view bindtap="{{item.events}}">
+            <view class="model-img">
+              <image src="{{item.toolIcon}}"></image>
+            </view>
+            <text>{{item.name}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view>
+    </view>
+  </view>
+  <tabbar tabbar="{{tabbar}}"></tabbar> 
+</view>
+<modal show="{{openDoorMessage}}" height='24%' width='80%' bindcancel="modalCancel" bindconfirm='modalConfirm'>
+  <view class='modal-content'>
+    <view class="modal-title">
+      <text>提示信息</text>
+    </view>
+    <view class="model-body">
+      <view class="model-content">
+        <text>您当前还没有创建项目，请先创建项目</text>
+      </view>
+    </view>
+  </view>
+</modal>

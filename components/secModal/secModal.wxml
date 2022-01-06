@@ -1,0 +1,12 @@
+<view class='mask' wx:if='{{show}}' bindtap='clickMask'>
+  <view class='modal-content' catchtap="subClickMask" style='top:{{top}};left:{{left}};height:{{height}};width:{{width}}'>
+    <scroll-view scroll-y class='main-content'>
+      <slot></slot>
+    </scroll-view>
+    <!-- <view class="modal-btn-close" catchtap='clickMask'><text>x</text></view> -->
+    <view class='modal-btn-wrapper'>
+      <view class='confirm-btn' style='color:#DA2C1F' catchtap='confirm'>确定</view>
+      <view class='cancel-btn' style='color:#707070' catchtap='cancel'>取消</view>
+    </view>
+  </view>
+</view>

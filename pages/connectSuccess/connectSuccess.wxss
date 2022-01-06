@@ -1,0 +1,59 @@
+/* pages/connectSuccess/connectSuccess.wxss */
+.connectPage .tips{
+  margin-top:20rpx;
+  padding:0 30rpx;
+}
+.connectPage .alignCenter{
+  text-align:center;
+}
+.connectPage .blueImg{
+  display: block;
+  margin:80rpx auto 50rpx;
+  width:198rpx;
+  height:198rpx;
+}
+.connectPage .connecting{
+  font-size:32rpx;
+  color:#201000;
+  font-weight:600;
+  letter-spacing: 2rpx;
+  text-align: center;
+}
+.connectPage .closeDv{
+  color:#858585;
+  font-size:26rpx;
+  letter-spacing: 2rpx;
+  display:block;
+}
+.loginBtnBox{
+  margin-top:60rpx;
+  width:100%;
+}
+.loginBtn{
+  background:rgba(0,187,156,1);
+  color:#fff;
+  font-size:36rpx;
+  height:94rpx;
+  line-height:94rpx;
+  border:none !important;
+  outline: none;
+  border-radius:48rpx;
+  text-align: center;
+}
+.loginBtn::after{
+  border:none;
+}
+.btn-fixed{
+  position: fixed;
+  bottom:20rpx;
+  z-index:10;
+  padding: 0 20rpx;
+  height:98rpx;
+  line-height:38rpx;
+  background:#fff;
+  box-sizing: border-box;
+}
+
+.marginBottom{
+  margin-bottom:100rpx;
+}

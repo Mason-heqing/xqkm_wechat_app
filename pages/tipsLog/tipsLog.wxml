@@ -1,0 +1,25 @@
+<!--pages/tipsLog/tipsLog.wxml-->
+<view class="container">
+  <view class="log-list" wx:for="{{logList}}"  wx:key="*this">
+    <view class="item-list">
+      <view class="iten-name">时间</view>
+      <view class="item-value">{{item.createTime}}</view>
+    </view>
+    <view class="item-list">
+      <view class="iten-name">类型</view>
+      <view class="item-value" wx:if="{{'C' == item.optType}}">创建</view>
+      <view class="item-value" wx:elif="{{'D' == item.optType}}">删除</view>
+      <view class="item-value" wx:else>更新</view>
+    </view>
+    <view class="item-list">
+      <view class="iten-name">目标</view>
+      <view class="item-value" wx:if="{{'1' == item.type}}">人员</view>
+      <view class="item-value" wx:elif="{{'2' == item.type}}">人脸</view>
+      <view class="item-value" wx:else>人员+人脸</view>
+    </view>
+    <view class="item-list">
+      <view class="iten-name">日志内容</view>
+      <view class="item-value">{{item.msg}}</view>
+    </view>
+  </view>
+</view>

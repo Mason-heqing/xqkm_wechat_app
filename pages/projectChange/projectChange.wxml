@@ -1,0 +1,30 @@
+<!--pages/projectChange/projectChange.wxml-->
+<view class="container">
+  <view class="page-section">
+    <view class="room-change">
+      <view class="info-search">
+        <view class='search'>
+          <input type='text' placeholder='搜素项目名称' confirm-type='search' value="{{inputValue}}" bindinput='inputBind'
+            bindconfirm='query'></input>
+          <image class="" src='../../image/search.png' bindtap='query'></image>
+        </view>
+      </view>
+      <view class="room-change-body" hidden="{{showMessage}}">
+        <view class="list-item" wx:for="{{list}}" wx:key="*this" data-appId="{{item.id}}" bindtap="projectChange">
+          <view class="room-name">
+            <text>{{item.name}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="no-message" hidden="{{noMessage}}">
+        <view class="no-image">
+          <image src="../../image/noMessage.png"></image>
+        </view>
+        <view class="no-content">
+          <text>暂无消息</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

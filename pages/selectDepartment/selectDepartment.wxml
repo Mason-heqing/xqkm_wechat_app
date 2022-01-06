@@ -1,0 +1,10 @@
+<!--pages/selectDepartment/selectDepartment.wxml-->
+<view class="container">
+  <tree
+    dataTree="{{dataTree}}"
+    selectKey="{{selectKey}}"
+    bind:select="handleSelect"
+    isSelectLastNode="true"
+    isOpenAll="true"
+  ></tree>
+</view>

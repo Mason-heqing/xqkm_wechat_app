@@ -1,0 +1,58 @@
+<!--pages/bleOperationMode/bleOperationMode.wxml-->
+<view class="container">
+  <view class="page-body">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section">
+        <view class="section__title">
+          模式选择 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <view class="select-mode-btn">
+            <view class="item-btn singlechip" style="background:{{singlechipBg}};color:{{singlechipCor}}" bindtap="singlechip">单机</view>
+            <!-- <view class="item-btn lan" style="background:{{lanBg}};color:{{lanCor}}" bindtap="lan">局域网联机</view> -->
+            <view class="item-btn cloud-platform" style="background:{{cloudPlatformBg}};color:{{cloudPlatformCor}}" bindtap="cloudPlatform">云平台联机</view>
+          </view>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+         设备端设备名称 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="name" placeholder-style="color:#999" maxlength="7" style="text-align:right;" bindinput='trimName' value="{{form.name}}" placeholder="请输入设备名，如802大门" />
+        </view>
+      </view>
+      <view class="section" hidden="{{server}}">
+        <view class="section__title">
+          服务器地址 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="address" placeholder-style="color:#999"  value="{{form.address}}" style="text-align:right;" placeholder="请输入服务器地址" />
+        </view>
+      </view>
+      <view class="section" hidden="{{server}}">
+        <view class="section__title">
+          端口号 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="port" placeholder-style="color:#999" style="text-align:right;" bindinput='trimPhone' value="{{form.port}}" placeholder="请输入端口号" />
+        </view>
+      </view>
+      <view class="client" hidden="{{client}}">
+          <view class="client-content">
+            <input type="text" name="ip" value="{{form.ip}}" placeholder="绑定客户电脑客户端主机IP地址"/>
+          </view>
+          <view class="tips">
+            <image src="../../image/tips.png"></image><text>可不填写直接点“确定”按钮，后续使用电脑客户端搜索到</text>
+          </view>
+      </view>
+      <view style="width:100%;height:60rpx;border-top:1rpx solid #eee;background:#f0f0f0;"></view>
+      <view class="btn-area">
+        <button class='nodisabled' form-type="submit">下一步</button>
+      </view>
+      <view style="width:100%;height:60rpx;border-top:1rpx solid #eee;background:#f0f0f0;"></view>
+      <view class="tips tips-content" hidden="{{!server}}">
+        <text >*单机模式下请通过设备端触摸屏或"QFace门禁助手"APP实现部门管理、人员管理、门禁管理、考勤管理、参数配置等功能，无法通过本小程序进行管理。</text>
+      </view>
+      <view class="tips tips-content" hidden="{{server}}">
+        <text>*云平台联机模式下通过本小程序管理部门、人员和授权。</text>
+      </view>
+    </form>
+  </view>
+</view>

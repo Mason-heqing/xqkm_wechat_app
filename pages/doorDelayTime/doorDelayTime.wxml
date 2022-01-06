@@ -1,0 +1,12 @@
+<!--pages/doorDelayTime/doorDelayTime.wxml-->
+<view>
+  <view class="dbox">
+    <view class="bt"></view>
+    <view class="dname">开锁持续时长</view>
+    <input class="din" type="number" style="text-align:right;" value="{{inputValue}}" bindinput='trimTimes' placeholder="请输入开锁持续时长" />
+    <view class="endbox"></view>
+  </view>
+</view>
+<view class="submit">
+  <button class='nodisabled' bindtap="submit">确定</button>
+</view>

@@ -1,0 +1,49 @@
+<!--pages/addDepartment/addDepartment.wxml-->
+<!-- <view>
+  <view class="dbox">
+    <view class="bt">*</view>
+    <view class="dname">部门名称</view>
+    <input class="din" type="text" value="{{title}}" placeholder="请输入部门名称" />
+    <view class="endbox"></view>
+  </view>
+  <view class="fgx"></view>
+  <view class="dbox">
+    <view class="bt">*</view>
+    <view class="dname">上级部门</view>
+    <input class="din" type="text" value="" placeholder="" disabled="false" />
+    <view class="endbox">》</view>
+  </view>
+</view> -->
+<view class="container">
+  <view class="page-body">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="form-content">
+        <view class="section">
+        <view class="section__title">
+          部门名称 <text class="star">*</text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="id" hidden='true' value="{{form.id}}" />
+          <input name="appId" hidden='true' value="{{form.appId}}" />
+          <input name="title" style="text-align:right;" placeholder-style="color:#999" bindinput='trimName' maxlength="12" value="{{form.title}}" placeholder="请输入部门名称" />
+        </view>
+      </view>
+      <view class="section" bindtap="addCard">
+        <view class="section__title">
+          上级部门 <text class="star">*</text></view>
+        <view class="section_name" style="text-align:right;">          
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="groupTitle">
+            <input name="parentName" hidden='true' value="{{array[index].groupTitle}}" />
+            <input name="parentId" hidden='true' value="{{array[index].groupId}}" />
+            <text>{{array[index].groupTitle}}</text>
+            <image class="right_img" src='../../image/arrow.png'></image>
+          </picker>
+        </view>
+      </view>
+      </view>
+      <view class="btn-area">
+        <button wx:if="{{namesContent}}" class='nodisabled' form-type="submit">确定</button>
+        <button wx:else class='disabled' disabled="true" form-type="submit">确定</button>
+      </view>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+<!--pages/accessControl/accessControl.wxml-->
+<!-- <view>
+ 
+  <navigator hover-class="navigator-hover" url="/pages/authorization/authorization">
+    <view class="listbox">
+      <view>门禁授权</view>
+    </view>
+  </navigator>
+  <navigator url="/pages/openingRecord/openingRecord" hover-class="navigator-hover">
+    <view class="listbox">
+      <view>开门记录</view>
+    </view>
+  </navigator>
+ 
+</view> -->
+<view class="container">
+   <view class="list" bindtap="authorization">
+      <view class="list-name">
+         <text>门禁授权</text>
+      </view>
+      <view class="list-icon">
+         <image src="../../image/arrow.png"></image>
+      </view>
+   </view>
+   <view class="list" bindtap="openingRecord">
+      <view class="list-name">
+         <text>开门记录</text>
+      </view>
+      <view class="list-icon">
+         <image src="../../image/arrow.png"></image>
+      </view>
+   </view>
+</view>

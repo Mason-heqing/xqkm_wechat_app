@@ -1,0 +1,58 @@
+<!--pages/deviceManagement/deviceManagement.wxml-->
+<view class="container">
+  <view class="topbox">
+    <view class="tool-item" bindtap="qrcodeCode">
+      <image src="../../image/scanCodeAdd.png"></image>
+      <!-- <text>扫码添加</text> -->
+    </view>
+    <view class="tool-item" bindtap="addManually">
+      <image src="../../image/manualInput.png"></image>
+      <!-- <text>手动录入</text> -->
+    </view>
+    <view class="tool-item" bindtap="refresh">
+      <image src="../../image/refresh_list.png"></image>
+    </view>
+  </view>
+  <view class="device-num">设备（{{deviceNum}}）</view>
+  <scroll-view class="mainbox" scroll-y bindscrolltolower="upper" style="height:{{scrollHeight}}px">
+    <view class="listbox" wx:for="{{deviceList}}" wx:key="*this">
+      <view class="item-left">
+         <view class="status online" wx:if="{{item.online}}">
+            <text>在线</text>
+         </view>
+         <view class="status offline" wx:else>
+            <text>离线</text>
+         </view>
+         <view class="infobox">
+            <view class="adress">{{item.deviceName}}</view>
+            <view class="sn-num">
+              <text>{{item.serial}}</text>
+            </view>
+         </view>
+      </view>
+      <view class="item-right">
+        <view class="icon" data-item="{{item}}" bindtap="authorization">
+           <image src="../../image/authorization.png"></image>
+        </view>
+        <view class="icon" data-item="{{item}}" bindtap="edit">
+           <image src="../../image/edit.png"></image>
+        </view>
+        <view class="icon" data-deviceId="{{item.deviceId}}" data-online="{{item.online}}"  data-vendor="{{item.vendor}}" bindtap="set">
+          <image src="../../image/setup.png"></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<modal show="{{openDoorMessage}}" height='24%' width='80%' bindcancel="modalCancel" bindconfirm='modalConfirm'>
+  <view class='modal-content'>
+    <view class="modal-title">
+      <text>提示信息</text>
+    </view>
+    <view class="model-body">
+      <view class="model-content">
+        <text>是否开启蓝牙</text>
+      </view>
+    </view>
+  </view>
+</modal>

@@ -1,0 +1,22 @@
+<!--pages/limitedNetworkSettings/limitedNetworkSettings.wxml-->
+<view class="container">
+   <view class="list" bindtap="wifiSet">
+      <view class="list-name">
+         <text>WIFI设置</text>
+      </view>
+      <view class="list-icon">
+         <image src="../../image/arrow.png"></image>
+      </view>
+   </view>
+   <view class="list" bindtap="limitedSet">
+      <view class="list-name">
+         <text>有线设置</text>
+      </view>
+      <view class="list-icon">
+         <image src="../../image/arrow.png"></image>
+      </view>
+   </view>
+   <view class="next-step">
+     <button bindtap="nextStep">下一步</button>
+   </view>
+</view>

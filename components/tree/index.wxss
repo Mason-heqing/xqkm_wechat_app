@@ -1,0 +1,62 @@
+.tree {
+  text-align: left;
+  /* height: 45px;
+  line-height: 45px; */
+  padding-left: 15px;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.tree-item {
+  height: 45px;
+  line-height: 45px;
+  display: flex;
+  /* padding-left: 15px; */
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.tree-item-onOff {
+  /* width: 30px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.tree-item-onOff  image {
+  width:30rpx;
+  height: 20rpx;
+  display: block;
+  transition: 0.4s;
+}
+.tree-item-onOff-closed {
+  transform: rotate(-90deg);
+}
+.tree-item-onOff-open {
+  transform: rotate(0deg);
+}
+.tree-item-name {
+  width: calc(100% - 40px);
+  display: flex;
+  padding-left: 10px;
+}
+.name {
+  width: calc(100% - 50px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.img {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img  image {
+  width: 15px;
+  height: 10px;
+  display: block;
+}
+.tree-item-name-select {
+  background: #ECF7FA;
+  color: #0079FE;
+}
+.tree-item-name-select2 {
+  color: #0079FE;
+}

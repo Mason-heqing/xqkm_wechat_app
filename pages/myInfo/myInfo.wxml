@@ -1,0 +1,16 @@
+<!--pages/myInfo/myInfo.wxml-->
+<view class="container">
+  <view class="page-head" bindtap="camera" wx:if="{{isFacePic}}">
+    <image src="{{faceUrl}}"></image>
+  </view>
+  <view class="page-body">
+    <view class="person-name">姓名</view>
+    <view class="input-name">
+      <input type="text" bindinput="trimName" value="{{name}}" placeholder="请输入姓名"/>
+    </view>
+  </view>
+  <view class="submit">
+    <button wx:if="{{namesContent && faceContent}}" class='nodisabled' bindtap="submit">确定</button>
+    <button wx:else class='disabled' disabled="true" bindtap="submit">确定</button>
+  </view>
+</view>

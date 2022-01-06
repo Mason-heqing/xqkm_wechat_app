@@ -1,0 +1,63 @@
+<view>
+  <view class="titbox">身份信息</view>
+  <view class="informationbox">
+    <view class="inbox">
+    <view class="leftf">*</view>
+    <view class="leftf">姓名</view>
+    <input type="text value" class="leftf" />
+  </view>
+  <view class="inbox">
+    <view class="leftf">*</view>
+    <view class="leftf">姓名</view>
+    <input type="text value" class="leftf" />
+  </view>
+  <view class="inbox">
+    <view class="leftf">*</view>
+    <view class="leftf">姓名</view>
+    <input type="text value" class="leftf" />
+  </view>
+  <view class="inbox">
+    <view class="leftf">*</view>
+    <view class="leftf">姓名</view>
+    <input type="text value" class="leftf" />
+  </view>
+    <view class="inbox">
+      <view class="leftf">*</view>
+      <view class="leftf">姓名</view>
+      <input type="text value" class="leftf" />
+    </view>
+  </view>
+  <view class="titbox">认证方式</view>
+    <view>
+      <view class="inbox">
+        <view class="firstbox"></view>
+        <view class="username">人脸</view>
+        <input type="text" class="" />
+        <view class="endbox">》</view>
+      </view>
+      <view class="inbox">
+        <view class="firstbox"></view>
+        <view class="username">卡号</view>
+        <input type="text" class="" />
+        <view class="endbox">》</view>
+      </view>
+      <view class="inbox">
+        <view class="firstbox"></view>
+        <view class="username">密码</view>
+        <input type="password" class="" />
+        <view class="endbox">》</view>
+      </view>
+  </view>
+  <view class="titbox">通行权限</view>
+  <view>
+      <view class="inbox">
+        <view class="firstbox"></view>
+        <view class="username">授权门禁</view>
+        <input type="password" class="" />
+        <view class="endbox">》</view>
+      </view>
+  </view>
+  
+  <button class="addbtn">确定</button>
+  <button class="delbtn">删除</button>
+</view>

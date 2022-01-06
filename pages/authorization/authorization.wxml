@@ -1,0 +1,11 @@
+<!--pages/authorization/authorization.wxml-->
+<view class="container">
+   <view class="list" wx:for="{{list}}" wx:key="*this" data-item="{{item}}" bindtap="authorization">
+      <view class="list-name">
+         <text>{{item.deviceName}}</text>
+      </view>
+      <view class="list-icon">
+         <image src="../../image/arrow.png"></image>
+      </view>
+   </view>
+</view>

@@ -1,0 +1,26 @@
+<!--pages/manualInput/manualInput.wxml-->
+<view class="container">
+  <view class="page-body">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section">
+        <view class="section__title">
+          设备SN号 <text class="star">*</text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="id" type="text" hidden="true" value="{{form.id}}"/>
+          <input name="serial" style="text-align:right;" placeholder-style="color:#999" bindinput='trimSerial' value="{{form.serial}}" placeholder="请输入设备SN号" />
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+         项目设备名称 <text class="star">*</text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="name" placeholder-style="color:#999" style="text-align:right;" bindinput='trimName' maxlength="12" value="{{form.name}}" placeholder="请输入设备名称" />
+        </view>
+      </view>
+      <view class="btn-area">
+        <button wx:if="{{serialContent && namesContent}}" class='nodisabled' form-type="submit">确定</button>
+        <button wx:else class='disabled' disabled="true" form-type="submit">确定</button>
+      </view>
+    </form>
+  </view>
+</view>

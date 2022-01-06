@@ -1,0 +1,55 @@
+<!--pages/selectAuthorized/selectAuthorized.wxml-->
+<!-- <view class="container">
+   <view class="page-body">
+    <view class="authorized-list" wx:for="{{authorizedList}}" wx:key="*this" data-index="{{index}}" data-checked="{{item.deviceGrantStatus}}" bindtap="selectAuthorized">
+      <view class="authorized-name">
+        <text>{{item.deviceName}}</text>
+      </view>
+      <view class="authorized-checkbox">
+        <input type="text" hidden="true" value="{{item.deviceId}}" />
+        <checkbox checked="{{item.deviceGrantStatus}}"/>
+      </view>
+    </view>
+    <checkbox-group bindchange="checkboxChange">
+        <label class="tool-list" wx:for="{{authorizedList}}" wx:key="*this">
+          <view class="list-bd">{{item.deviceName}}</view>
+          <view class="list-hd">
+            <checkbox value="{{item.deviceId}}" checked="{{item.deviceGrantStatus}}"/>
+          </view>
+        </label>
+     </checkbox-group>
+   <view class="submit">
+     <button bindtap="submit">
+       <text>确定</text>
+       <text>（{{number}}）</text>
+     </button>
+   </view>
+   </view>
+</view> -->
+<view class="container">
+  <view class="box-body">
+     <view class="tips-icon">
+       <view class="tips-content" wx:for="{{authorizedList}}" wx:key="*this" data-grantId="{{item.grantId}}" bindtap="tipsLog">
+        <view class="list-icon" wx:if="{{item.deviceGrantStatus}}">
+          <image wx:if="{{1 == item.status}}" src="../../image/tips.png"></image>
+          <image wx:if="{{2 == item.status}}" src="../../image/synchro_success.png"></image>
+          <image wx:if="{{3 == item.status}}" src="../../image/synchronizationFailed.png"></image>
+        </view>
+      <view class="list-icon" wx:else></view>
+       </view>
+     </view>
+     <checkbox-group bindchange="checkboxChange">
+        <label class="tool-list" wx:for="{{authorizedList}}" wx:key="*this">
+          <view class="list-bd {{item.online?'green':'block'}}">{{item.deviceName}}</view>
+          <view class="list-hd">
+            <checkbox value="{{item.deviceId}}" checked="{{item.deviceGrantStatus}}"/>
+          </view>
+        </label>
+     </checkbox-group>
+  </view>
+  
+  <view class="submit">
+     <button bindtap="submit">确定（{{number}}）</button>
+  </view>
+</view>
+

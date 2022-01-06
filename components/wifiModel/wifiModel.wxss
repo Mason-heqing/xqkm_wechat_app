@@ -1,0 +1,63 @@
+
+.gbox-content{
+  background-color: #fff;
+  border-radius: 12rpx;
+  z-index:9999;
+  overflow: hidden;
+  width:100%;
+  box-shadow:0px 0px 5px 0px rgba(212,212,212,0.5),0px 0px 1px 0px rgba(173,173,173,0.5);
+  border-radius:0px 0px 39rpx 39rpx;
+}
+.gbox-name{
+  text-align:center;
+  font-size:30rpx;
+  color:#000000;
+  font-weight: 600;
+  height:84rpx;
+  line-height:84rpx;
+  background:#F2F2F2;
+}
+.wifi-icon{
+  display: inline-block;
+  width:28rpx;
+  height:32rpx;
+}
+.wifi-singe{
+  display:inline-block;
+  width:42rpx;
+  height:32rpx;
+  margin-left:20rpx;
+}
+.touch-scroll{
+  width:100%;
+  max-height: 576rpx;
+  overflow: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  padding:0 40rpx;
+  box-sizing: border-box;
+}
+.wifi-name{
+  font-size:28rpx;
+  font-weight: 600;
+}
+.wifi-list-item{
+  display: flex;
+  justify-content: space-between;
+  border-bottom:0.5rpx solid rgba(153, 153, 153, 0.5);
+  height:64rpx;
+  line-height: 64rpx;
+}
+.wifi-list-item:last-child{
+  border-bottom:0px;
+}
+.gbox-btn-close{
+  background-color:#DBDBDB;
+  height:73rpx;
+  color:#3396FD;
+  line-height: 74rpx;
+  text-align: center;
+  font-size:30rpx;
+  font-weight: 600;
+}
+

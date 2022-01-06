@@ -1,0 +1,91 @@
+<!--pages/setDate/setDate.wxml-->
+<view class="container">
+  <view class="page-body">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section">
+        <view class="section__title">
+          自动同步 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <!-- <switch color="#0079FE" checked="{{form.switchChecked}}" bindchange="switch1Change" /> -->
+          <picker  bindchange="bindPickerChangeTimeControl" value="{{timeControlIndex}}" range="{{timeControl}}">
+            <view class="picker">
+              <input name="timeControl" hidden='true' value="{{timeControlValue[timeControlIndex]}}" />
+              {{timeControl[timeControlIndex]}}
+            </view>
+          </picker>
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          时区 <text class="star"></text></view>
+        <!-- <view class="section_name" wx:if="{{1 === jurisdiction}}" style="text-align:right;">
+          <text>{{timeZone[index]}}</text>
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view> -->
+        <view class="section_name">
+          <picker  bindchange="bindPickerChange" value="{{index}}" range="{{timeZone}}">
+            <view class="picker">
+              <input name="timeZone" hidden='true' value="{{timeZoneValue[index]}}" />
+              {{timeZone[index]}}
+            </view>
+          </picker>
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          日期 <text class="star"></text></view>
+        <!-- <view class="section_name" wx:if="{{1 === jurisdiction}}" style="text-align:right;">
+          <text>{{form.date}}</text>
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view> -->
+        <view class="section_name" style="text-align:right;">
+          <picker mode ="date"  bindchange="bindDateChange" 
+           value="{{date}}">
+            <input name="date" hidden='true' value="{{form.date}}" />
+            <text>{{form.date}}</text>
+          </picker>
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          时间 <text class="star"></text></view>
+        <!-- <view class="section_name" wx:if="{{1 === jurisdiction}}" style="text-align:right;">
+          <text>{{form.time}}</text>
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view> -->
+        <view class="section_name" style="text-align:right;">
+          <picker mode ="time"  bindchange="bindTimeChange" 
+           value="{{time}}">
+            <input name="time" hidden='true' value="{{form.time}}" />
+            <text>{{form.time}}</text>
+          </picker>
+          <image class="right_img" src='../../image/arrow.png'></image>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          NTP服务器 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="ntpServer" bindinput="ntpServerChange" placeholder="请输入NTP服务器地址" value="{{form.ntpServer}}" />
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          NTP端口 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="ntpPort" bindinput="ntpPortChange"  placeholder="请输入NTP端口" value="{{form.ntpPort}}" />
+        </view>
+      </view>
+      <view style="width:100%;height:60rpx;border-top:1rpx solid #eee;background:#f0f0f0;"></view>
+      <view class="btn-area">
+        <button class='nodisabled'
+          form-type="submit">确定</button>
+        <!-- <button wx:else class='disabled' disabled="true" form-type="submit">确定</button> -->
+      </view>
+      <view style="width:100%;height:60rpx;border-top:1rpx solid #eee;background:#f0f0f0;"></view>
+    </form>
+  </view>
+</view>

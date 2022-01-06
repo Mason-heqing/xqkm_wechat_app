@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "开门记录",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "modal": "/components/secModal/secModal"
+  }
+}

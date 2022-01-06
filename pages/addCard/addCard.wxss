@@ -1,0 +1,73 @@
+/* pages/addCard/addCard.wxss */
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  font-size:28rpx;
+}
+.dbox {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color:#fff;
+}
+
+.dname {
+  flex: 2.5;
+  padding-left: 30rpx;
+}
+
+.din {
+  flex: 6.5;
+}
+.add-card{
+  position: relative;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-items: center; */
+  padding:0 50rpx;
+  margin-top: 300rpx;
+}
+.add-card>input{
+  /* width: 100%; */
+  padding: 20rpx 230rpx 20rpx 40rpx;
+  border: 1rpx solid #fff;
+  /* text-align: center; */
+  background: #fff;
+  border-radius: 60rpx;
+}
+.add-card .deviceRead{
+  position: absolute;
+  right:50rpx;
+  top:0rpx;
+  z-index: 99;
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding:30rpx;
+  border-radius: 60rpx;
+}
+.submit{
+  position: absolute;
+  left: 0;
+  bottom: 200rpx;
+  width: 100%;
+}
+.submit button{
+  width: 80%;
+  background: #DA2C1F;
+  color: #fff;
+}
+.endbox{
+  display: flex;
+  align-items: center;
+}
+.right_img{
+  width: 30rpx;
+  height: 30rpx;
+}

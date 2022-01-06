@@ -1,0 +1,120 @@
+<view class="container">
+  <!-- <view class="topbox">
+    <view class="searchbox">
+      <image src="../../image/search.png"  />
+      <input class="serchIn" placeholder="搜索" />
+    </view>
+  </view> -->
+  <view class="openDoor-search">
+    <view class="info-search">
+      <view class='search'>
+        <input type='text' placeholder='搜素姓名/工号' confirm-type='search' value="{{inputValue}}" bindinput='inputBind'
+          bindconfirm='query'></input>
+        <image class="" src='../../image/search.png' bindtap='query'></image>
+      </view>
+      <view class="exportbox" bindtap="exportbox">[{{recordNum}}]导出</view>
+    </view>
+    
+  </view>
+  <view class="mainbox">
+    <view class="mainbox-head">
+      <!-- <view class="exportbox" bindtap="exportbox">
+        <image src="../../image/export.png"></image>
+        <text>导出记录</text>
+      </view> -->
+      <!-- <view class="refresh" bindtap="refresh">
+        <image src="../../image/refresh.png"></image>
+      </view> -->
+    </view>
+    <view class="screenbox">
+      <view class="times">
+        <view class="datepick">
+          <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+        </view>
+        <view class="times-icon">
+          <image src="../../image/triangle.png"></image>
+        </view>
+      </view>
+      <view class="equipmentpick" bindtap="selectDevice">
+        <!-- <picker bindchange="bindDevicePickerChange" data-deviceId="{{deviceList[index].deviceId}}" value="{{index}}"
+          range="{{deviceList}}" range-key="deviceName">
+          <view class="picker">
+            <text> {{deviceList[index].deviceName}}</text>
+            <image src="../../image/up.png"></image>
+          </view>
+        </picker> -->
+        <text>{{deviceName}}</text>
+        <image src="../../image/triangle.png"></image>
+      </view>
+    </view>
+    <scroll-view class="openingRecord"  scroll-y bindscrolltolower="upper" style='height:{{scrollHeight}}px;'>
+      <view class="listbox" wx:for="{{recordList}}" wx:key="*this">
+        <view class="captureimg" wx:if="{{'' == item.snapPic}}">
+          <image wx:if="{{isFacePic}}" src="../../image/default_face.png"></image>
+        </view>
+        <view class="captureimg" wx:else>
+          <image bindtap="bigImg" data-img="{{item.snapPic}}" wx:if="{{isFacePic}}" src="{{item.snapPic}}"></image>
+        </view>
+        <view class="opinformation">
+          <view class="item-name" wx:if="{{('' != item.code) && ('' != item.personGroupName)}}">
+            <text>{{item.personName}}</text>
+            <text>（{{item.code}}</text>
+            <text> {{item.personGroupName}}）</text>
+          </view>
+          <view class="item-name" wx:elif="{{('' != item.code) && ('' == item.personGroupName)}}">
+            <text>{{item.personName}}</text>
+            <text>（{{item.code}}）</text>
+          </view>
+          <view class="item-name" wx:elif="{{('' == item.code) && ('' != item.personGroupName)}}">
+            <text>{{item.personName}}</text>
+            <text>（{{item.personGroupName}}）</text>
+          </view>
+          <view class="item-name" wx:elif="{{('' == item.code) && ('' == item.personGroupName)}}">
+            <text>{{item.personName}}</text>
+          </view>
+          <view class="item-address">
+            <image src="../../image/navigation.png"></image>
+            <text>{{item.deviceName}}</text>
+          </view>
+          <view class="item-times">
+            <image src="../../image/times.png"></image>
+            <text>{{item.snapTime}}</text>
+          </view>
+        </view>
+        <view class="opmode">{{item.passMode}}</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<modal show="{{openDoorMessage}}" height='35%' width='80%' bindcancel="modalCancel" bindconfirm='modalConfirm'>
+  <view class='modal-content'>
+    <view class="modal-title">
+      <text>请填写邮箱地址</text>
+    </view>
+    <view class="model-body">
+      <view class="model-content">
+        <view class="email">
+          <input type="text" value="{{mailbox}}" bindinput="mailChange" placeholder="请输入邮箱地址" />
+        </view>
+        <view class="ex-checkbox">
+          <!-- <checkbox-group bindchange="checkboxChange">
+            <label class="checkbox">
+             导出图片 <checkbox value="1" checked="{{exportPicFlag}}"/>
+             </label>
+          </checkbox-group> -->
+          <checkbox-group bindchange="checkboxChange">
+          <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
+            <view class="weui-cell__hd">
+              {{item.name}} <checkbox value="{{item.value}}" checked="{{item.checked}}"/>
+            </view>
+          </label>
+        </checkbox-group>
+        </view>
+      </view>
+    </view>
+  </view>
+</modal>

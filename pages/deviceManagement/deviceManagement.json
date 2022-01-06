@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "设备管理",
+  "usingComponents": {
+    "modal": "/components/secModal/secModal"
+  },
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "android-tip": "../../components/androidTip/androidTip"
+  },
+  "navigationBarTitleText": "搜索蓝牙"
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择部门",
+  "usingComponents": {
+    "tree": "/components/tree/index"
+  }
+}

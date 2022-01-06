@@ -1,0 +1,55 @@
+
+.gbox-content{
+  position: fixed;
+  top: 0%;
+  left: 0;
+  right:0;
+  height:100%;
+  width:100%;
+  background-color: #fff;
+  z-index:9999;
+  overflow: hidden;
+}
+
+.loginBtnBox{
+  margin-top:60rpx;
+  width:100%;
+}
+.btn-fixed{
+  position: fixed;
+  bottom:20rpx;
+  z-index:10;
+  padding: 0 20rpx;
+  height:98rpx;
+  line-height:38rpx;
+  background:#fff;
+  box-sizing: border-box;
+}
+.loginBtn{
+  background:rgba(0,187,156,1);
+  color:#fff;
+  font-size:36rpx;
+  height:94rpx;
+  border:none !important;
+  outline: none;
+  border-radius:48rpx;
+}
+.loginBtn::after{
+  border:none;
+}
+.androidTips{
+  width:100%;
+}
+.android-tip-content{
+  text-align:center;
+  width:90%;
+  margin: 60rpx auto;
+  font-size:24rpx;
+  font-weight:600;
+  color:rgba(61,61,61,1);
+  line-height:50rpx;
+}
+
+.marginBottom{
+  margin-bottom:120rpx;
+}

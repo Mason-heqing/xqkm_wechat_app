@@ -1,0 +1,31 @@
+<!--pages/test/test.wxml-->
+<view class="container">
+  <view class="page-header" bindtap="myInfo">
+    <view class="person-name" wx:if="{{isFacePic}}">
+      <image wx:if="{{'' != avatarUrl}}" src="{{dataUrl}}{{faceUrl}}{{avatarUrl}}"></image>
+      <image wx:else src="../../image/default_face.png"></image>
+       <text>{{name}}</text>
+    </view>
+    <view class="person-name" wx:else>
+      <image src="../../image/default_face.png"></image>
+       <text>{{name}}</text>
+    </view>
+    <view class="person-details">
+       <image src="../../image/arrow.png"></image>
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="tool" bindtap="myProject">
+       <view class="tool-name">
+         <image src="../../image/project_icon.png"></image>
+         <text>我的项目</text>
+       </view>
+       <view class="tool-right">
+         <image src="../../image/arrow.png"></image>
+       </view>
+    </view>
+  </view>
+</view>
+<view>
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+</view>

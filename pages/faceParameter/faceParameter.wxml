@@ -1,0 +1,51 @@
+<!--pages/faceParameter/faceParameter.wxml-->
+<view class="container">
+  <view class="page-body">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section">
+        <view class="section__title">
+          1：N匹配阈值 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input type="number" name="similarThres" style="text-align:right;" placeholder-style="color:#999" bindinput='trimSimilarThres' maxlength="24" value="{{form.similarThres}}" placeholder="请输入N匹配阈值" />
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          1：1匹配阈值 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input type="number" name="detThres" style="text-align:right;" placeholder-style="color:#999" bindinput='trimDetThres' maxlength="24" value="{{form.detThres}}" placeholder="请输入1匹配阈值" />
+        </view>
+      </view>
+      <!-- <view class="section">
+        <view class="section__title">
+          图像抓拍质量 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="quality" bindinput="qualityChange" value="{{form.quality}}" />
+        </view>
+      </view> -->
+      <view class="section">
+        <view class="section__title">
+          活体识别等级 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <picker bindchange="bindPickerChangeLiveSwitch" value="{{liveSwitchIndex}}" range="{{liveSwitchName}}" >
+            <input name="liveSwitch" hidden='true' value="{{liveSwitchValue[liveSwitchIndex]}}" />
+            <text style="color:{{timesColor}}">{{liveSwitchName[liveSwitchIndex]}}</text>
+            <image class="right_img" src='../../image/arrow.png'></image>
+          </picker>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          活体检测阈值 <text class="star"></text></view>
+        <view class="section_name" style="text-align:right;">
+          <input name="liveThres" placeholder-style="color:#999" style="text-align:right;" bindinput='trimLiveThres' maxlength="8" value="{{form.liveThres}}" placeholder="请输入活体检测阈值" />
+        </view>
+      </view>
+      <view class="btn-area">
+        <button class='nodisabled' form-type="submit" wx:if="{{similarThresContent && detThresContent && liveThresContent}}">确定</button>
+        <button wx:else class='disabled' disabled="true" form-type="submit" wx:else>确定</button>
+      </view>
+    </form>
+  </view>
+</view>
+

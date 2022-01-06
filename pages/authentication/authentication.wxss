@@ -1,0 +1,32 @@
+/* pages/authentication/authentication.wxss */
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+}
+.tool-title{
+  padding: 30rpx;
+  color: #666;
+}
+.tool-list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.list-bd{
+  flex-grow: 1;
+}
+.submit{
+  margin-top:80rpx;
+}
+.submit button,button-hover{
+  width: 80%;
+  background: #DA2C1F;
+  color: #fff;
+}

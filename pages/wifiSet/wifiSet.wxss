@@ -1,0 +1,125 @@
+/* pages/wifiSet/wifiSet.wxss */
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #F5F5F5;
+}
+.is-open-wifi{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+  padding: 30rpx;
+  background: #fff;
+}
+.tool-name{
+  flex-grow: 1;
+}
+.save-wifi{
+  padding: 20rpx 30rpx;
+  font-size: 28rpx;
+  color: #ACACAC;
+}
+.save-name{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30rpx;
+  background: #fff;
+}
+.current-name,.item-name{
+  flex-grow: 1;
+}
+.current-icon>image,.nearby-icon>image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.nearby-search{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+
+
+ /* 开门密码样式 */
+
+ .mask{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 10;
+}
+
+.modal-content{
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  /* height: 80%; */
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.main-content{
+  flex: 1;
+  height: 100%;
+  overflow-y: hidden; 
+}
+.modal-btn-close{
+  position: absolute;
+  z-index: 999;
+  right:0rpx;
+  top:0rpx;
+  width: 60rpx;
+  height:80rpx;
+  line-height: 80rpx;
+  /* background: red; */
+  vertical-align: center;
+  text-align: center;
+}
+.modal-btn-close>image{
+    width:40rpx;
+    height: 40rpx;
+}
+.changePassword{
+  position: absolute;
+  left: 0;
+  bottom:50rpx;
+  width: 100%;
+  
+}
+.changePassword>button{
+   width: 60% !important;
+   /* padding: 18rpx 24rpx; */
+   font-size:30rpx;
+   color:#fff;
+   background:#DA2C1F
+}
+.modal-title {
+  padding: 40rpx 0;
+  font-weight: hold;
+  text-align: center;
+  font-size: 36rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.model-content{
+  padding: 38rpx 30rpx;
+}
+.model-content>input{
+  border: 1rpx solid #ccc;
+  padding: 10rpx 20rpx;
+}

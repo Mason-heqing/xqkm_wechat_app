@@ -1,0 +1,62 @@
+/* pages/creatDevice/creatDevice.wxss */
+.container{
+  padding: 0;
+}
+swiper{
+  height:340rpx;
+}
+.swiper{
+  padding:0 30rpx;
+}
+.swiper-item image{
+  width: 100%;
+  height:340rpx;
+  border-radius: 10rpx; 
+}
+.add-device-btn{
+  display: flex;
+  flex-direction: row;
+  margin-top:－10rpx;
+}
+.tool-icon{
+  width: 100%;
+  height: 150rpx;
+  padding: 30rpx;
+}
+.tool-icon>image{
+  width: 100%;
+  height: 100%;
+}
+.content{
+  padding: 30rpx;
+}
+.tips{
+  width: 100%;
+  height: 200rpx;
+  /* padding: 30rpx; */
+  /* line-height: 55rpx;
+  color: #666;
+  border: 1rpx solid #eee;
+  border-radius: 10rpx;
+  background: tan; 
+  border-radius:.8em; 
+  box-shadow:0 0 0 .4em #655; 
+  outline: .7em solid #655; */
+}
+.tips>image{
+  width: 100%;
+  height: 100%;
+}
+.tool-icon-get-phone{
+  width: 100%;
+  height: 180rpx;
+  padding: 20rpx;
+}
+.tool-icon-get-phone>image{
+  width: 100%;
+  height: 100%;  
+}
+button::after {
+  border: 0 none;
+  outline: none;
+}

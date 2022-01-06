@@ -1,0 +1,29 @@
+<!--pages/selectDevice/selectDevice.wxml-->
+<view class="container">
+  <view class="page-section">
+     <view class="long-range" hidden="{{showMessage}}">
+        <view class="long-range-model" wx:for="{{list}}" wx:key="*this" style="background:{{item.online?'#fff':'#eee'}};box-shadow:{{item.online?'0px 2px 12px rgba(238,238,238,1);':'0px 2px 12px rgba(238,238,238,1)'}};" data-deviceId="{{item.deviceId}}" data-deviceName="{{item.deviceName}}" bindtap="selectDevice">
+          <view class="icon">
+             <image wx:if="{{item.online}}" src="../../image/key_open.png"></image>
+             <image wx:else src="../../image/key_off.png"></image>
+          </view>
+          <view class="long-range-name">
+            <text>{{item.deviceName}}</text>
+          </view>
+        </view>
+     </view>
+     <view class="no-message" hidden="{{noMessage}}">
+       <view class="no-image">
+         <image src="../../image/noMessage.png"></image>
+       </view>
+       <view class="no-content">
+         <text>暂无消息</text>
+       </view>
+       <!-- <view class="again-get">
+           <button bindtap="again">重试</button>
+       </view> -->
+    </view>
+  </view>
+</view>
+
+

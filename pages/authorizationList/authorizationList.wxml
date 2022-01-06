@@ -1,0 +1,63 @@
+<!--pages/authorizationList/authorizationList.wxml-->
+<view class="container">
+  <view class="device-header">
+    <view class="header-item" bindtap="addPerson">
+      <image src="../../image/add_authentication.png"></image>
+    </view>
+    <view class="header-item" bindtap="clearPerson">
+      <image src="../../image/clear_authentication.png"></image>
+    </view>
+    <view class="header-item" bindtap="refreshAuthentication">
+      <image src="../../image/refresh_authentication.png"></image>
+    </view>
+    <!-- <view class="addbox" bindtap="addPerson">
+      <image src="../../image/addKey.png" /> 添加授权人员
+    </view>
+    <view class="clear-person" bindtap="clearPerson">
+      <image src="../../image/clear.png"/> 清空授权人员
+    </view> -->
+  </view>
+  
+  <!-- <view class="authorize">
+    <view class="person-num">已授权人员({{personNum}})</view>
+    <view class="clear-person" bindtap="clearPerson">
+      <image src="../../image/clear.png"></image>
+    </view>
+  </view> -->
+  <view class="info-search">
+      <view class='search'>
+        <input type='text' placeholder='搜素姓名/工号/部门' confirm-type='search' value="{{inputValue}}" bindinput='inputBind'
+          bindconfirm='query'></input>
+        <image class="" src='../../image/search.png' bindtap='query'></image>
+      </view>
+      <view class="person-num" bindtap='query'>{{personNum}}</view>
+    </view>
+  <scroll-view class="mainbox"  scroll-y bindscrolltolower="upper" style='height:{{scrollHeight}}px;'>
+    <view class="list-body">
+      <view class="listbox" wx:for="{{list}}" wx:key="*this">
+        <view class="imgbox" wx:if="{{'' == item.personId}}">
+          <image wx:if="{{isFacePic}}" src="../../image/default_face.png"></image>
+        </view>
+        <view class="imgbox" wx:else>
+          <image wx:if="{{isFacePic}}" src="{{dataUrl}}{{faceUrl}}{{item.personId}}"></image>
+        </view>
+        <view class="aname" wx:if="{{!item.deleted}}">{{item.name}}</view>
+        <view class="aname" wx:else><del class="del">{{item.name}}</del></view>
+        <view class="synchronization" wx:if="{{2 === item.status}}" data-grantId="{{item.grantId}}" bindtap="tipsLog">
+          <view class="astate state1">已同步</view>
+        </view>
+        <view class="synchronization" wx:elif="{{1 === item.status}}" data-grantId="{{item.grantId}}" bindtap="tipsLog">
+          <view class="astate state2">待同步</view>
+        </view>
+        <view class="synchronization" wx:else bindtap="tipsLog" data-grantId="{{item.grantId}}">
+          <view class="astate state3">同步失败</view>
+        </view>
+        <view class="delbtn" bindtap="personDelete" data-grantId="{{item.grantId}}">
+          <image src="../../image/delete.png"></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+
+</view>
